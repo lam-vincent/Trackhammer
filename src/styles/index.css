@@ -1,0 +1,25 @@
+:root {
+    --main-bg-color: #C1B3A3;
+    --white: #FFFFFF;
+    --gray: #e5e5e580;
+    --black: #1C1A19;
+    --muted-yellow: #f2e090;
+    --muted-red: #dd7788;
+    --muted-blue: #667799;
+    --muted-green: #7a9460;
+    --muted-orange: #dd9977;
+    --muted-purple: #665566;
+    --muted-black: #223333;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    font-family: "Roboto", sans-serif;
+    color: var(--black);
+    font-size: 1.25rem;
+}

@@ -1,0 +1,14 @@
+.layout-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title {
+    padding-left: 32px;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+}
