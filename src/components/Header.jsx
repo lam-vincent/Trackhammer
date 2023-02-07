@@ -6,7 +6,12 @@ const Header = () => {
   return (
     <header className="bg-transparent">
       <div className="flex items-center justify-between px-4 py-3">
-        <img src="src\assets\logo.png" alt="logo" className="h-8" />
+        <div className="flex items-center">
+        <a href="http://localhost:5173/" className="bg-neutral-700 p-2">
+          <img src="src\assets\logo.png" alt="logo" className="h-8" />
+        </a>
+        <h1 className="text-2xl pl-4">TrackHammer</h1>
+        </div>
         <div className="flex items-center">
           {isLoggedIn ? (
             <>
