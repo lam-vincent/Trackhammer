@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 const slides = [
   "src/assets/home.png",  
