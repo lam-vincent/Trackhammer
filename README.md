@@ -1,0 +1,63 @@
+<a name="readme-top"></a>
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Stargazers][stars-shield]][stars-url]
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/62343240/217802601-b3557c80-52d7-49f4-b859-4eaf26619e4a.png" alt="Logo" width="80" height="80">
+
+<h3 align="center">Trackhammer</h3>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+<p align="center">
+    <p>
+    TrackHammer is an online application for wargamers that helps them keep track of their scores during tabletop battles. The app has three different modes to choose from: you can join the ongoing war in "Eternal War", or start your own custom crusade with friends in "Maëlstrom" and "The TaleMaker". The app is designed to make it easier for wargamers to track their progress and stay engaged in the games they love.
+    </p>
+</p>
+
+### Built With
+
+- [![React][react.js]][react-url]
+
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+### Prerequisites
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[contributors-url]: https://github.com/mrccniv/Trackhammer/graphs/contributors
+[stars-url]: https://github.com/mrccniv/Trackhamme/stargazers
+[react-url]: https://reactjs.org/
