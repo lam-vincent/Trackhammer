@@ -5,7 +5,7 @@
 
 <!-- PROJECT LOGO -->
 
-<h3 align="center">Trackhammer</h3>
+<h1 align="center">Trackhammer</h1>
 
 <br />
 
