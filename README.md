@@ -3,11 +3,12 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
     <img src="https://user-images.githubusercontent.com/62343240/217802601-b3557c80-52d7-49f4-b859-4eaf26619e4a.png" alt="Logo" width="80" height="80">
+
+![day_1](https://user-images.githubusercontent.com/62343240/217972414-7f39b564-6542-4462-b813-3093b7be044f.gif)
 
 <h3 align="center">Trackhammer</h3>
 
