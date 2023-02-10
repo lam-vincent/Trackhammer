@@ -58,5 +58,4 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [contributors-url]: https://github.com/mrccniv/Trackhammer/graphs/contributors
-[stars-url]: https://github.com/mrccniv/Trackhamme/stargazers
 [react-url]: https://reactjs.org/
