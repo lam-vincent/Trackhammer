@@ -11,8 +11,9 @@ const slides = [
 const Home = () => {
 
   return (
-    <div>
-      <div className="flex flex-col justify-center h-screen bg-cover bg-center p-32 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
+    <div className="flex-col items-center justify-center px-8">
+    <div className="">
+      <div className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <div className='flex flex-col items-center backdrop-blur-md rounded-3xl p-4 mb-32'>
         <h1 className="text-5xl font-bold text-white mb-10">Welcome to TrackHammer</h1>
         <p className="text-lg text-white mb-10">TrackHammer is an online application for wargamers that helps them keep track of their scores during tabletop battles. The app has three different modes to choose from: you can join the ongoing war in "Eternal War", or start your own custom crusade with friends in "Maëlstrom" and "The TaleMaker". The app is designed to make it easier for wargamers to track their progress and stay engaged in the games they love.</p>
@@ -23,6 +24,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
+    </div>
 
       <Carousel></Carousel>
 
