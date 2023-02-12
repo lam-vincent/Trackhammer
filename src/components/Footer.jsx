@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="flex-1 text-center">
         <h4 className="font-bold mb-2">Contributors</h4>
         <p>Audrey DAMIBA</p>
-        <p>Mélissa LACHEB</p>
+        <p>Melissa LACHEB</p>
         <p>Eyfeline TALA</p>
         <p>Kevin TRAN</p>
         <p>Charles FAZI</p>
