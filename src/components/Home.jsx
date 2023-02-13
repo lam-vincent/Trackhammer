@@ -28,19 +28,19 @@ const Home = () => {
 
       <Carousel></Carousel>
 
-      <div className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
+      <div name="how-does-it-work" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
         <h1 className="text-5xl font-bold text-white">How does it work ?</h1>
       </div>
 
-      <div className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
+      <div name="eternal-war" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
         <h1 className="text-5xl font-bold text-white">Eternal War</h1>
       </div>
 
-      <div className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
+      <div name="maelstrom" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
         <h1 className="text-5xl font-bold text-white">Maëlstrom</h1>
       </div>
 
-      <div className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
+      <div name="the-talemaker" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
         <h1 className="text-5xl font-bold text-white">The TaleMaker</h1>
       </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-scroll";
 
 const slides = [
   "src/assets/home.png",  
@@ -45,9 +46,11 @@ const Carousel = () => {
               <span>to the war effort and makes your faction triumph ?</span>
             </div>
           <div name="button" className="flex items-center justify-center ml-8">
+          <Link to="how-does-it-work" spy={true} smooth={true} duration={1000}>
             <button className="z-10 bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
               play now
             </button>
+          </Link>
           </div>
           </div>
         </div>
