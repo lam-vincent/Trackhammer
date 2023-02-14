@@ -8,6 +8,34 @@ const slides = [
   "src/assets/talemaker.png",  
 ];
 
+const anchors = [
+  "how-does-it-work",
+  "eternal-war",
+  "maelstrom",
+  "the-talemaker",
+]
+
+const texts = [
+  "Follow these three steps to get ready for the battlefield",
+  "In the Grim Darkness of the far future, there is only war. Join the whole world in an indomitable crusade. Everyone is playing on the same map. Will you contribute to the war effort and makes your faction triumph ?",
+  "Maim ! Burn ! Let there be carnage !  Join your friends in an ongoing campaign up to twelve player. Carves your own legends in the darkness of the 41st millenium and let your army be remembered for the eons to come.",
+  "The power of the machine god invest thee. Live ! Design your map using our tool and create your very own narrative to make the best experience available for up to twelve player, the only limit is your imagination. Be aware that this feature can only be used by  contributor account.",
+]
+
+const titles = [
+  "How does it work ?",
+  "Eternal War",
+  "Maelström of War",
+  "The Talemaker",
+]
+
+const buttons = [
+  "Click me",
+  "Play now",
+  "Enter a room",
+  "Start your campaign",
+]
+
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -35,20 +63,19 @@ const Carousel = () => {
 
       <div name="container" className="flex-col items-center justify-center grow">
         <div name="title" className="flex items-center justify-center">
-            <span className="z-10 rounded-3xl p-8 pt-5 item bg-black bg-opacity-50 text-white text-7xl">Eternal War</span>
+            <span className="z-10 rounded-3xl p-8 pt-5 item bg-black bg-opacity-50 text-white text-7xl">
+            {titles[currentSlide]}
+            </span>
         </div>
         <div name="content" className="flex items-center justify-center">
           <div name="text" className="flex items-center justify-center rounded-xl p-8 m-4 bg-black bg-opacity-50 text-white backdrop-blur-md">
-            <div className="grid place-items-center">
-              <span>In the Grim Darkness of the far future, there is only war.</span>
-              <span>Join the whole world in an indomitable crusade. </span>
-              <span>Everyone is playing on the same map. Will you contribute </span>
-              <span>to the war effort and makes your faction triumph ?</span>
+            <div className="grid place-items-center max-w-xl">
+              {texts[currentSlide]}
             </div>
           <div name="button" className="flex items-center justify-center ml-8">
-          <Link to="how-does-it-work" spy={true} smooth={true} duration={1000}>
+          <Link to={anchors[currentSlide]} spy={true} smooth={true} duration={1000}>
             <button className="z-10 bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
-              play now
+              {buttons[currentSlide]}
             </button>
           </Link>
           </div>

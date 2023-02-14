@@ -22,7 +22,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              <button className="btn btn-blue-500">Profil</button>
+              <button className="btn btn-blue-500">Profile</button>
               <button className="btn btn-blue-500 ml-4" onClick={() => setIsLoggedIn(true)}>
                 Sign Out
               </button>
