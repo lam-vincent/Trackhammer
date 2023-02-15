@@ -28,8 +28,23 @@ const Home = () => {
 
       <Carousel></Carousel>
 
-      <div name="how-does-it-work" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
-        <h1 className="text-5xl font-bold text-white">How does it work ?</h1>
+      <div name="how-does-it-work" className="h-screen w-full flex flex-col items-center justify-center bg-current mt-8 rounded-3xl">
+        <h1 name="title" className="text-5xl font-bold text-white">
+          How does it work ?
+        </h1>
+        <div name="container" className="flex items-center justify-center my-8 space-x-8">
+          <ol name="description" class="list-decimal text-white max-w-lg">
+            <li className="pt-4">Once connected, give to each player a color depicting their army.</li>
+            <li className="pt-4">Play a game of warhammer 40k on an hexagon in common with another color, the app will generate a random scenario for your game.</li>
+            <li className="pt-4">Once the game played, choose the color of the hexagon of the player who won by clicking on it. If you're playing in Eternal War mode, this step will require a special code.</li>
+          </ol>
+          <img className="object-contain h-auto w-2/4" src={slides[0]} alt="home-image" />
+        </div>
+        <div name="tagline" className="flex items-center justify-center">
+          <span className="text-white">
+            Congrats, you're now ready to scour the battlefield !
+          </span>
+        </div>
       </div>
 
       <div name="eternal-war" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
