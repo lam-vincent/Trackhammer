@@ -26,7 +26,7 @@ const Footer = () => {
         <p>React</p>
         <p>Tailwind CSS</p>
         <p>Node.js</p>
-        <p>Express</p>
+        <p>Express.js</p>
       </div>
     </footer>
     
