@@ -28,7 +28,7 @@ const Home = () => {
 
       <Carousel></Carousel>
 
-      <div name="how-does-it-work" className="h-screen w-full flex flex-col items-center justify-center bg-current mt-8 rounded-3xl">
+      <div name="how-does-it-work" className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 name="title" className="text-5xl font-bold text-white">
           How does it work ?
         </h1>
@@ -47,15 +47,15 @@ const Home = () => {
         </div>
       </div>
 
-      <div name="eternal-war" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
+      <div name="eternal-war" className="h-screen w-full flex items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 className="text-5xl font-bold text-white">Eternal War</h1>
       </div>
 
-      <div name="maelstrom" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
+      <div name="maelstrom" className="h-screen w-full flex items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 className="text-5xl font-bold text-white">Maëlstrom</h1>
       </div>
 
-      <div name="the-talemaker" className="h-screen w-full flex items-center justify-center bg-current mt-8 rounded-3xl">
+      <div name="the-talemaker" className="h-screen w-full flex items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 className="text-5xl font-bold text-white">The TaleMaker</h1>
       </div>
 
