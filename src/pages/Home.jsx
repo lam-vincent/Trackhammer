@@ -2,6 +2,7 @@ import {Link} from "react-scroll";
 import Carousel from "/src/components/Carousel.jsx";
 import { NavLink } from "react-router-dom";
 import Timer from '/src/components/Timer';
+import FormMaelstrom from '/src/components/FormMaelstrom';
 
 const slides = [
   "src/assets/home.png",  
@@ -65,6 +66,7 @@ const Home = () => {
       <div name="maelstrom" className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 className="text-5xl font-bold text-white">Maëlstrom</h1>
         <div name="message" className="text-white">make sure to be sign in</div>
+        <FormMaelstrom />
       </div>
 
       <div name="the-talemaker" className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
