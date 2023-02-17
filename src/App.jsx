@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
 
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -16,6 +17,7 @@ function App() {
     <div className="bg-stone-50 min-h-screen">
       <Header />
         <main className="">
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
 

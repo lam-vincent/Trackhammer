@@ -49,7 +49,6 @@ const Carousel = () => {
 
   return (
     <div name="carousel" className="h-screen w-full flex items-center justify-center mt-8 px-4">
-      
 
       <img src={slides[currentSlide]} alt="Slide" className="absolute px-8 w-full h-full"/>
 
@@ -90,14 +89,6 @@ const Carousel = () => {
           </svg>
         </button>
       </div>
-
-
-
-
-
-      
-      
-
 
     </div>
   );

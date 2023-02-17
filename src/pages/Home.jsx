@@ -1,5 +1,6 @@
 import {Link} from "react-scroll";
 import Carousel from "/src/components/Carousel.jsx";
+import { NavLink } from "react-router-dom";
 
 const slides = [
   "src/assets/home.png",  
@@ -47,16 +48,25 @@ const Home = () => {
         </div>
       </div>
 
-      <div name="eternal-war" className="h-screen w-full flex items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
+      <div name="eternal-war" className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 className="text-5xl font-bold text-white">Eternal War</h1>
+        <div name="message" className="text-white">make sure to be sign in</div>
+        <div name="clock">clock</div>
+        <NavLink to="/eternal">
+          <button className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
+            Enter the Eternal War
+          </button>
+        </NavLink>
       </div>
 
-      <div name="maelstrom" className="h-screen w-full flex items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
+      <div name="maelstrom" className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 className="text-5xl font-bold text-white">Maëlstrom</h1>
+        <div name="message" className="text-white">make sure to be sign in</div>
       </div>
 
-      <div name="the-talemaker" className="h-screen w-full flex items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
+      <div name="the-talemaker" className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 className="text-5xl font-bold text-white">The TaleMaker</h1>
+        <div name="message" className="text-white">make sure to be sign in</div>
       </div>
 
     </div>
