@@ -34,7 +34,7 @@ const Subscribe = () => {
                             /month
                         </div>
                     </div>
-                    <div name="services" className="flex flex-col items-center justify-center h-3/6">
+                    <div name="services" className="flex flex-col items-center justify-center text-sm h-3/6">
                         <ul className="list-disc">
                             <li>access to Eternal War</li>
                             <li>access to Maelstrom</li>
@@ -58,7 +58,7 @@ const Subscribe = () => {
                             /month
                         </div>
                     </div>
-                    <div name="services" className="flex flex-col items-center justify-center h-3/6">
+                    <div name="services" className="flex flex-col items-center justify-center text-sm h-3/6">
                         <li className="list-none font-bold">Own up to</li>
                         <li className="list-none font-black text-2xl">10</li>
                         <li className="list-none font-bold">games simultaneously</li>
@@ -88,7 +88,7 @@ const Subscribe = () => {
                             /year
                         </div>
                     </div>
-                    <div name="services" className="flex flex-col items-center justify-center h-3/6">
+                    <div name="services" className="flex flex-col items-center justify-center text-sm h-3/6">
                         <li className="list-none font-bold">Own up to</li>
                         <li className="list-none font-black text-2xl">20</li>
                         <li className="list-none font-bold">games simultaneously</li>
