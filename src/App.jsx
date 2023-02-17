@@ -13,7 +13,7 @@ import Subscribe from "./pages/Subscribe.jsx";
 
 function App() {
   return (
-    <div className="bg-gray-200 min-h-screen">
+    <div className="bg-stone-50 min-h-screen">
       <Header />
         <main className="">
           <Routes>
