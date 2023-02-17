@@ -31,18 +31,21 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <div className="flex items-center justify-end w-1/4">
+        <div className="flex items-center justify-end w-1/4 space-x-4">
+          <NavLink to="/subscribe" className="bg-blue-600 px-4 py-1 rounded-full text-white">
+            <span className="">Subscribe</span>
+          </NavLink>
           {isLoggedIn ? (
             <>
               <button className="">Profile</button>
-              <button className=" ml-4" onClick={() => setIsLoggedIn(false)}>
+              <button className="" onClick={() => setIsLoggedIn(false)}>
                 Sign Out
               </button>
             </>
           ) : (
             <>
               <button className="">New Account</button>
-              <button className=" ml-4" onClick={() => setIsLoggedIn(true)}>
+              <button className="" onClick={() => setIsLoggedIn(true)}>
                 Sign In
               </button>
             </>
