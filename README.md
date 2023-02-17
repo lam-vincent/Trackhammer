@@ -1,7 +1,5 @@
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-
 <!-- PROJECT LOGO -->
 
 <h1 align="center">Trackhammer</h1>
@@ -22,8 +20,10 @@
 
 ### Built With
 
-- [![React][react.js]][react-url]
-
+- React
+- Tailwind CSS
+- Node.js
+- Express.js
 
 <!-- GETTING STARTED -->
 
@@ -37,6 +37,3 @@
   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-[contributors-url]: https://github.com/mrccniv/Trackhammer/graphs/contributors
-[react-url]: https://reactjs.org/
