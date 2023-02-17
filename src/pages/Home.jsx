@@ -3,6 +3,7 @@ import Carousel from "/src/components/Carousel.jsx";
 import { NavLink } from "react-router-dom";
 import Timer from '/src/components/Timer';
 import FormMaelstrom from '/src/components/FormMaelstrom';
+import FormTalemaker from '/src/components/FormTalemaker';
 
 const slides = [
   "src/assets/home.png",  
@@ -71,7 +72,9 @@ const Home = () => {
 
       <div name="the-talemaker" className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl" style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}>
         <h1 className="text-5xl font-bold text-white">The TaleMaker</h1>
-        <div name="message" className="text-white">make sure to be sign in</div>
+        <div name="message" className="text-white">make sure to be sign in and subscribe</div>
+        <a href="https://wahapedia.ru/wh40k9ed/the-rules/arks-of-omen-grand-tournament/" className="text-blue-500 hover:text-green-500">https://wahapedia.ru/wh40k9ed/the-rules/arks-of-omen-grand-tournament/</a>
+        <FormTalemaker />
       </div>
 
     </div>
