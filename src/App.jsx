@@ -10,6 +10,9 @@ import Eternal from "./pages/Eternal.jsx";
 import Maelstrom from "./pages/Maelstrom.jsx";
 import Talemaker from "./pages/Talemaker.jsx";
 import Subscribe from "./pages/Subscribe.jsx";
+import Signup from "./pages/Signup.jsx";
+import Login from "./pages/Login.jsx";
+import Forgot from "./pages/Forgot.jsx";
 
 
 function App() {
@@ -27,11 +30,11 @@ function App() {
 
             <Route path="/subscribe" element={<Subscribe />} />
 
-            {/* <Route path="/signup" element={<About />} />
-            <Route path="/login" element={<Products />} />
-            <Route path="/forgot" element={<About />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot" element={<Forgot />} />
 
-            <Route path="/profile/name:id" element={<About />} /> */}
+            {/* <Route path="/profile/name:id" element={<Profile />} /> */}
           </Routes>
         </main>
       <Footer />

@@ -37,17 +37,25 @@ const Header = () => {
           </NavLink>
           {isLoggedIn ? (
             <>
-              <button className="">Profile</button>
-              <button className="" onClick={() => setIsLoggedIn(false)}>
-                Sign Out
-              </button>
+              <NavLink to="/profile">
+                <button className="">Profile</button>
+              </NavLink>
+              <NavLink to="/">  
+                <button className="" onClick={() => setIsLoggedIn(false)}>
+                  Sign Out
+                </button>
+              </NavLink>
             </>
           ) : (
             <>
-              <button className="">New Account</button>
-              <button className="" onClick={() => setIsLoggedIn(true)}>
-                Sign In
-              </button>
+              <NavLink to="/signup">
+                <button className="">New Account</button>
+              </NavLink>
+              <NavLink to="/login">  
+                <button className="" onClick={() => setIsLoggedIn(true)}>
+                  Sign In
+                </button>
+              </NavLink>
             </>
           )}
         </div>
