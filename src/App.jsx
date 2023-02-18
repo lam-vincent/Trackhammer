@@ -17,7 +17,7 @@ import Forgot from "./pages/Forgot.jsx";
 
 function App() {
   return (
-    <div className="bg-stone-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen">
       <Header />
         <main className="">
           <ScrollToTop />

@@ -7,7 +7,7 @@ const Signup = () => {
         <div className=" text-4xl font-bold">
             Sign Up
         </div>
-        <div class="max-w-md shadow-2xl shadow-stone-500 rounded-3xl p-8 h-fit w-1/2">
+        <div class="max-w-md shadow-2xl shadow-stone-500 rounded-3xl p-8 h-fit w-1/2 bg-white">
             <div class="grid grid-cols-1 gap-6">
                 <label class="block">
                     <span class="">Username</span>
