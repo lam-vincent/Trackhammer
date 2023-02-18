@@ -29,7 +29,7 @@ const Signup = () => {
             </div>
         </div>
         <div>Already have an account ?</div>
-        <NavLink to="/login" className="flex items-center justify-center font-semibold rounded">
+        <NavLink to="/login" className="flex items-center justify-center font-semibold rounded underline">
             <button className="" type="">
                 Sign In
             </button>

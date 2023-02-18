@@ -17,7 +17,7 @@ const Login = () => {
                     <span class="">Password</span>
                 <input type="password" class="mt-1 block w-full" placeholder="" />
                 </label>
-                <NavLink to="/forgot" className="flex items-center justify-center rounded">
+                <NavLink to="/forgot" className="flex items-center justify-center rounded underline">
                     <button className="hover:text-green-600" type="">
                         Forgot password ?
                     </button>
@@ -30,7 +30,7 @@ const Login = () => {
             </div>
         </div>
         <div>You don't have an account yet ?</div>
-        <NavLink to="/signup" className="flex items-center justify-center font-semibold rounded">
+        <NavLink to="/signup" className="flex items-center justify-center font-semibold rounded underline">
             <button className="" type="">
                 Create Account
             </button>
