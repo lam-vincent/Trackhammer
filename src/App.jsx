@@ -13,7 +13,7 @@ import Subscribe from "./pages/Subscribe.jsx";
 import Signup from "./pages/Signup.jsx";
 import Login from "./pages/Login.jsx";
 import Forgot from "./pages/Forgot.jsx";
-
+import Profile from "./pages/Profile.jsx";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/forgot" element={<Forgot />} />
 
-            {/* <Route path="/profile/name:id" element={<Profile />} /> */}
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </main>
       <Footer />
