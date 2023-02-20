@@ -50,7 +50,9 @@ const Carousel = () => {
   return (
     <div name="carousel" className="h-screen w-full flex items-center justify-center mt-8 px-4">
 
-      <img src={slides[currentSlide]} alt="Slide" className="absolute px-8 w-full h-full"/>
+      <div className="absolute px-8 w-full h-full">
+        <img src={slides[currentSlide]} className="w-full h-full rounded-3xl"/>
+      </div>
 
       <div name="chevron-1" className="flex items-center justify-center grow-0">
         <button className="z-10 text-white hover:text-blue-500" onClick={handlePrevClick}>
