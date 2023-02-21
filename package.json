@@ -1,35 +1,6 @@
 {
-  "name": "trackhammer",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.8",
-    "framer-motion": "^9.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-feather": "^2.0.10",
-    "react-scroll": "^1.8.9",
-    "styled-components": "^5.3.6"
-  },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.3",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "react-router-dom": "^6.8.1",
-    "tailwindcss": "^3.2.4",
-    "vite": "^4.1.0"
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
   }
 }
