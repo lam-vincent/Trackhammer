@@ -1,4 +1,4 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Subscribe = () => {
 
@@ -41,9 +41,11 @@ const Subscribe = () => {
                         </ul>
                     </div>
                     <div name="button" className="flex items-center justify-center text-xl h-1/6 text-white">
-                        <div className="bg-emerald-500 rounded-full px-6 py-2">
-                            Sign Up
-                        </div>
+                        <NavLink to="/login">
+                            <div className="bg-emerald-500 rounded-full px-6 py-2">
+                                Sign Up
+                            </div>
+                        </NavLink>
                     </div>
                 </div>
                 <div className="flex-col items-center justify-center w-64 p-4 m-4 border-2 border-emerald-500 rounded-3xl h-5/6">
@@ -71,9 +73,11 @@ const Subscribe = () => {
                         </ul>
                     </div>
                     <div name="button" className="flex items-center justify-center text-xl h-1/6 text-white">
-                        <div className="bg-emerald-500 rounded-full px-6 py-2">
-                            Become a Warrior
-                        </div>
+                        <NavLink to="/login">
+                            <div className="bg-emerald-500 rounded-full px-6 py-2">
+                                Become a Warrior
+                            </div>
+                        </NavLink>
                     </div>
                 </div>
                 <div className="flex-col items-center justify-center w-64 p-4 m-4 border-2 border-emerald-500 rounded-3xl h-5/6">
@@ -101,9 +105,11 @@ const Subscribe = () => {
                         </ul>
                     </div>
                     <div name="button" className="flex items-center justify-center text-xl h-1/6 text-white">
-                        <div className="bg-emerald-500 rounded-full px-6 py-2">
-                            Become a Legend
-                        </div>
+                        <NavLink to="/login">
+                            <div className="bg-emerald-500 rounded-full px-6 py-2">
+                                Become a Legend
+                            </div>
+                        </NavLink>
                     </div>
                 </div>
             </div>
