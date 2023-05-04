@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import Header from "./components/Header.jsx";
@@ -14,29 +14,32 @@ import Signup from "./pages/Signup.jsx";
 import Login from "./pages/Login.jsx";
 import Forgot from "./pages/Forgot.jsx";
 import Profile from "./pages/Profile.jsx";
+import { useEffect } from "react";
+import { db } from "./firebase/index.jsx";
+import { ref, onValue } from "firebase/database";
 
 function App() {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Header />
-        <main className="">
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Home />} />
+      <main className="">
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-            <Route path="/eternal" element={<Eternal />} />
-            <Route path="/maelstrom" element={<Maelstrom />} />
-            <Route path="/talemaker" element={<Talemaker />} />
+          <Route path="/eternal" element={<Eternal />} />
+          <Route path="/maelstrom" element={<Maelstrom />} />
+          <Route path="/talemaker" element={<Talemaker />} />
 
-            <Route path="/subscribe" element={<Subscribe />} />
+          <Route path="/subscribe" element={<Subscribe />} />
 
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/forgot" element={<Forgot />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgot" element={<Forgot />} />
 
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </main>
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
