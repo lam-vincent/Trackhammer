@@ -15,6 +15,9 @@ const slides = [
   "src/assets/talemaker.png",
 ];
 
+const colorsGrayBlue = ["bg-gray-600", "bg-blue-600"];
+console.log("In the home component", colorsGrayBlue);
+
 const Home = () => {
   useEffect(() => {}, []);
 
@@ -135,9 +138,9 @@ const Home = () => {
       >
         <h1 className="text-5xl font-bold text-white">The TaleMaker</h1>
         <div name="message" className="text-white">
-          make sure to be sign in and subscribe
+          select the hexagons that you want to keep by clicking on them
         </div>
-        <Grid />
+        <Grid colors={colorsGrayBlue} />
       </div>
     </div>
   );
