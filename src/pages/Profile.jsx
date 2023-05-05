@@ -10,7 +10,7 @@ const Profile = () => {
         <div name="title" className="text-4xl font-bold">
           Welcome to your profile
         </div>
-        {/* <ProfileCard /> */}
+        <ProfileCard />
       </div>
     </div>
   );

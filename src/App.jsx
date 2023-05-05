@@ -14,9 +14,6 @@ import Signup from "./pages/Signup.jsx";
 import Login from "./pages/Login.jsx";
 import Forgot from "./pages/Forgot.jsx";
 import Profile from "./pages/Profile.jsx";
-import { useEffect } from "react";
-import { db } from "./firebase/index.jsx";
-import { ref, onValue } from "firebase/database";
 
 function App() {
   return (

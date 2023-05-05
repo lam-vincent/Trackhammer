@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 import Timer from "/src/components/Timer";
 import FormMaelstrom from "/src/components/FormMaelstrom";
 import Grid from "/src/components/Grid";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { db } from "../firebase";
-import { ref, set } from "firebase/database";
+import { onValue, ref, set } from "firebase/database";
 
 const slides = [
   "src/assets/home.png",
@@ -19,10 +19,20 @@ const colorsGrayBlue = ["bg-gray-600", "bg-blue-600"];
 console.log("In the home component", colorsGrayBlue);
 
 const Home = () => {
-  useEffect(() => {}, []);
+  const [players, setPlayers] = useState();
+
+  useEffect(() => {
+    updateDb();
+    onValue(ref(db, "aezr3"), (snapshop) => {
+      const data = snapshop.val();
+      console.log(data);
+      setPlayers(data.players);
+    });
+  }, []);
 
   function updateDb() {
-    set(ref(db, "test"), "Hello World");
+    console.log("hglez");
+    set(ref(db, "aezr3"), { players: ["alex", "vincent"] });
   }
 
   return (
@@ -31,6 +41,11 @@ const Home = () => {
       {/* <button onClick={updateDb}>updatedb</button> */}
 
       <div className="">
+        <h1>
+          {players.map((name) => (
+            <h2>{name}</h2>
+          ))}
+        </h1>
         <div
           className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl"
           style={{
