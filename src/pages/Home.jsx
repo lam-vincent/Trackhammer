@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <div className="flex-col items-center justify-center px-8">
       {/* look here */}
-      <button onClick={updateDb}>updatedb</button>
+      {/* <button onClick={updateDb}>updatedb</button> */}
 
       <div className="">
         <div
@@ -41,7 +41,7 @@ const Home = () => {
             <h1 className="text-5xl font-bold text-white mb-10">
               Welcome to TrackHammer
             </h1>
-            <p className="text-lg text-white mb-10">
+            <p className="text-lg text-white mb-10 mx-64">
               TrackHammer is an online application for wargamers that helps them
               keep track of their scores during tabletop battles. The app has
               three different modes to choose from: you can join the ongoing war
