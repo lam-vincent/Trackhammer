@@ -1,6 +1,7 @@
 import Grid from "/src/components/Grid";
 
 const colorsFactions = [
+  "",
   "bg-gray-600",
   "bg-red-600",
   "bg-green-600",

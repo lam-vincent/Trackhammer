@@ -3,7 +3,7 @@ import Carousel from "/src/components/Carousel.jsx";
 import { NavLink } from "react-router-dom";
 import Timer from "/src/components/Timer";
 import FormMaelstrom from "/src/components/FormMaelstrom";
-import Grid from "/src/components/Grid";
+import CreateRoom from "/src/components/CreateRoom";
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { onValue, ref, set } from "firebase/database";
@@ -15,11 +15,8 @@ const slides = [
   "src/assets/talemaker.png",
 ];
 
-const colorsGrayBlue = ["bg-gray-600", "bg-blue-600"];
-console.log("In the home component", colorsGrayBlue);
-
 const Home = () => {
-  const [players, setPlayers] = useState();
+  const [players, setPlayers] = useState([]);
 
   useEffect(() => {
     updateDb();
@@ -146,17 +143,7 @@ const Home = () => {
         <FormMaelstrom />
       </div>
 
-      <div
-        name="the-talemaker"
-        className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
-        style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
-      >
-        <h1 className="text-5xl font-bold text-white">The TaleMaker</h1>
-        <div name="message" className="text-white">
-          select the hexagons that you want to keep by clicking on them
-        </div>
-        <Grid colors={colorsGrayBlue} />
-      </div>
+      <CreateRoom />
     </div>
   );
 };

@@ -1,33 +1,26 @@
 import React from "react";
 import Hexagon from "./Hexagon";
 
+const NB_ROWS = 10;
+const NB_COLS = 10;
+
 function Grid(colors) {
   console.log("In the grid component", colors.colors);
   return (
-    <div className="grid grid-cols-6 gap-1 bg-red-400">
-      {/* row 1 */}
-      <div className="w-16 h-12 bg-green-400 col-start-2 col-end-4 ...">
-        <Hexagon colorsProps={colors.colors} />
-      </div>
-      <div className="w-16 h-12 bg-green-400 col-start-4 col-span-2 ...">
-        <Hexagon colorsProps={colors.colors} />
-      </div>
-      {/* row 2 */}
-      <div className="w-16 h-12 bg-green-400 col-start-1 col-end-3 ...">
-        <Hexagon colorsProps={colors.colors} />
-      </div>
-      <div className="w-16 h-12 bg-green-400 col-start-3 col-end-5 ...">
-        <Hexagon colorsProps={colors.colors} />
-      </div>
-      <div className="w-16 h-12 bg-green-400 col-start-5 col-span-2 ...">
-        <Hexagon colorsProps={colors.colors} />
-      </div>
-      {/* row 3 */}
-      <div className="w-16 h-12 bg-green-400 col-start-2 col-end-4 ...">
-        <Hexagon colorsProps={colors.colors} />
-      </div>
-      <div className="w-16 h-12 bg-green-400 col-start-4 col-span-2 ...">
-        <Hexagon colorsProps={colors.colors} />
+    <div className="flex justify-center my-24">
+      <div className="flex flex-col items-center">
+        {Array.from({ length: NB_ROWS }).map((_, rowIndex) => (
+          <div
+            key={rowIndex}
+            className={`flex gap-1 ${rowIndex % 2 === 0 && "-my-2.5"}`}
+          >
+            {Array.from({
+              length: rowIndex % 2 === 0 ? NB_COLS - 1 : NB_COLS,
+            }).map((_, colIndex) => (
+              <Hexagon key={colIndex} colorsProps={colors.colors} />
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

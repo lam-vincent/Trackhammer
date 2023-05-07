@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../index.css";
 
 function Hexagon(colorsProps) {
   const colors = colorsProps;
