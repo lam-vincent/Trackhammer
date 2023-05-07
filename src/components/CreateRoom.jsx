@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Grid from "./Grid.jsx";
+import CreateGrid from "./CreateGrid.jsx";
 import { NavLink } from "react-router-dom";
 import { db } from "../firebase";
 import { ref, set } from "firebase/database";
@@ -35,6 +35,29 @@ function CreateRoom() {
     setCode(generateCode());
   }, []);
 
+  //rowIndex * NB_COLS + colIndex
+  // 0-->8
+  // 10-->19
+  // 20-->28
+  // 30-->39
+  const [hexagons, setHexagons] = useState(new Array(95).fill(0)); //maybe not the right size (95 ???)
+
+  console.log(hexagons.length);
+
+  async function HandleClick() {
+    let i = 0;
+    for (const hexagon of hexagons) {
+      set(ref(db, `${code}/hexagons/${i}`), {
+        colorIndex: hexagon,
+      });
+      if (i % 20 === 8) {
+        i += 2;
+      } else {
+        i++;
+      }
+    }
+  }
+
   // return code while the component is mounting
   // in the dom
   if (!code) return;
@@ -49,10 +72,17 @@ function CreateRoom() {
       <div name="message" className="text-white">
         select the hexagons that you want to keep by clicking on them
       </div>
-      <Grid roomCode={code} colors={colors} />
+      <CreateGrid
+        colors={colors}
+        hexagons={hexagons}
+        setHexagons={setHexagons}
+      />
 
-      <NavLink to="/maelstrom/${code}">
-        <button className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
+      <NavLink to={"/maelstrom/" + code}>
+        <button
+          onClick={HandleClick}
+          className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded"
+        >
           Create Room
         </button>
       </NavLink>

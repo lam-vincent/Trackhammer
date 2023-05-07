@@ -2,18 +2,13 @@ import React, { useEffect, useState } from "react";
 import { ref, get, set } from "firebase/database";
 import { db } from "../firebase";
 
-function Hexagon({ index, colorsProps, roomCode, colorIndex }) {
-  const [localColorIndex, setColorIndex] = useState(colorIndex);
-
-  async function updateHexagon(i) {
-    await set(ref(db, `${roomCode}/hexagons/${index}`), {
-      colorIndex: i,
-    });
-  }
+function Hexagon({ index, colorsProps, hexagons, setHexagons }) {
+  const [localColorIndex, setColorIndex] = useState(0);
 
   async function handleChange() {
     setColorIndex((prev) => (prev + 1 === colorsProps.length ? 0 : prev + 1));
-    await updateHexagon(localColorIndex);
+    hexagons[index] = localColorIndex;
+    setHexagons(hexagons);
   }
 
   const style = {

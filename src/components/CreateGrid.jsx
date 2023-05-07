@@ -1,26 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Hexagon from "./Hexagon";
-import { ref, onValue } from "firebase/database";
-import { db } from "../firebase";
+import CreateHexagon from "./CreateHexagon";
 
 const NB_ROWS = 10;
 const NB_COLS = 10;
 
-function Grid({ roomCode, colors }) {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    // pf5Ri
-    onValue(ref(db, roomCode), (snapshot) => {
-      const data = snapshot.val();
-      console.log(data);
-      setData(data);
-    });
-  }, []);
-
-  if (!roomCode) return;
-  if (!data) return;
-
+function Grid({ colors, hexagons, setHexagons }) {
   return (
     <div className="flex justify-center my-24 border-2 rounded-xl pt-3">
       <div className="flex flex-col items-center">
@@ -32,16 +16,12 @@ function Grid({ roomCode, colors }) {
             {Array.from({
               length: rowIndex % 2 === 0 ? NB_COLS - 1 : NB_COLS,
             }).map((_, colIndex) => (
-              <Hexagon
+              <CreateHexagon
                 key={colIndex}
                 index={rowIndex * NB_COLS + colIndex}
                 colorsProps={colors}
-                roomCode={roomCode}
-                colorIndex={
-                  Boolean(roomCode)
-                    ? data.hexagons[rowIndex * NB_COLS + colIndex].colorIndex
-                    : 0
-                }
+                hexagons={hexagons}
+                setHexagons={setHexagons}
               />
             ))}
           </div>

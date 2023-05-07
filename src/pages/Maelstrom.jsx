@@ -26,7 +26,7 @@ const Maelstrom = () => {
   return (
     <div className="flex-col items-center justify-center px-8 text-white">
       <div
-        className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl space-y-8"
+        className="flex flex-col justify-center bg-cover bg-center p-8 rounded-3xl space-y-8"
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
         <div className="wrapper">
