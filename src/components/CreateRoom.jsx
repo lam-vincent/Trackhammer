@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
-import GridTalemaker from "./GridTalemaker.jsx";
+import Grid from "./Grid.jsx";
 import { NavLink } from "react-router-dom";
 import { db } from "../firebase";
 import { ref, set } from "firebase/database";
 
-const colorsGrayBlue = ["bg-gray-600", "bg-blue-600"];
+const colors = [
+  "",
+  "bg-gray-600",
+  "bg-red-600",
+  "bg-green-600",
+  "bg-blue-400",
+  "bg-blue-800",
+  "bg-purple-600",
+  "bg-pink-400",
+];
 
 function CreateRoom() {
   const [code, setCode] = useState(null);
@@ -26,10 +35,6 @@ function CreateRoom() {
     setCode(generateCode());
   }, []);
 
-  async function writeGrid() {
-    set(ref(db, code), { code: code });
-  }
-
   // return code while the component is mounting
   // in the dom
   if (!code) return;
@@ -44,13 +49,10 @@ function CreateRoom() {
       <div name="message" className="text-white">
         select the hexagons that you want to keep by clicking on them
       </div>
-      <GridTalemaker roomCode={code} colors={colorsGrayBlue} />
+      <Grid roomCode={code} colors={colors} />
 
-      <NavLink to="/maelstrom">
-        <button
-          onClick={writeGrid}
-          className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded"
-        >
+      <NavLink to="/maelstrom/${code}">
+        <button className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
           Create Room
         </button>
       </NavLink>

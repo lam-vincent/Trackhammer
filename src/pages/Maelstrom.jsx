@@ -1,6 +1,9 @@
 import Grid from "/src/components/Grid";
+import { ref, onValue, set } from "firebase/database";
+import { db } from "../firebase";
+import { useParams } from "react-router-dom";
 
-const colorsFactions = [
+const colors = [
   "",
   "bg-gray-600",
   "bg-red-600",
@@ -12,6 +15,14 @@ const colorsFactions = [
 ];
 
 const Maelstrom = () => {
+  const { code } = useParams();
+  console.log(code);
+
+  onValue(ref(db, code), (snapshot) => {
+    const data = snapshot.val();
+    console.log(data);
+  });
+
   return (
     <div className="flex-col items-center justify-center px-8 text-white">
       <div
@@ -23,7 +34,7 @@ const Maelstrom = () => {
           <div className="connected-users"></div>
         </div>
         <div className="board">
-          <Grid colors={colorsFactions} />
+          <Grid roomCode={code} colors={colors} />
         </div>
       </div>
     </div>

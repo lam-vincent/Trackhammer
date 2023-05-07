@@ -25,7 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/eternal" element={<Eternal />} />
-          <Route path="/maelstrom" element={<Maelstrom />} />
+          <Route path="/maelstrom/:code" element={<Maelstrom />} />
           <Route path="/talemaker" element={<Talemaker />} />
 
           <Route path="/subscribe" element={<Subscribe />} />

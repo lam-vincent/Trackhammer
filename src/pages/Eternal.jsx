@@ -1,6 +1,6 @@
 import Grid from "/src/components/Grid";
 
-const colorsGrayBlue = ["bg-gray-600", "bg-blue-600"];
+const colors = ["bg-gray-600", "bg-blue-600"];
 
 const Eternal = () => {
   return (
@@ -23,7 +23,7 @@ const Eternal = () => {
             name="board"
             className="flex items-center justify-center border-2 rounded-3xl w-96 h-96"
           >
-            <Grid colors={colorsGrayBlue} />
+            <Grid colors={colors} />
           </div>
         </div>
       </div>
