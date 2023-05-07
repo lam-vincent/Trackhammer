@@ -18,25 +18,12 @@ const Maelstrom = () => {
         className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl space-y-8"
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
-        <div
-          name="title"
-          className="flex items-center justify-center text-4xl font-bold"
-        >
-          currently in a private room
+        <div className="wrapper">
+          <div className="code"></div>
+          <div className="connected-users"></div>
         </div>
-        <div name="code" className="flex items-center justify-center text-xl">
-          code: 9HFMN
-        </div>
-        <div
-          name="container"
-          className="flex items-center justify-center space-x-8"
-        >
-          <div
-            name="board"
-            className="flex items-center justify-center border-2 rounded-3xl w-96 h-96"
-          >
-            <Grid colors={colorsFactions} />
-          </div>
+        <div className="board">
+          <Grid colors={colorsFactions} />
         </div>
       </div>
     </div>

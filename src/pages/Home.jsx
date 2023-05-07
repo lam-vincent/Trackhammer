@@ -18,19 +18,14 @@ const slides = [
 const Home = () => {
   const [players, setPlayers] = useState([]);
 
-  useEffect(() => {
-    updateDb();
-    onValue(ref(db, "aezr3"), (snapshop) => {
-      const data = snapshop.val();
-      console.log(data);
-      setPlayers(data.players);
-    });
-  }, []);
-
-  function updateDb() {
-    console.log("hglez");
-    set(ref(db, "aezr3"), { players: ["alex", "vincent"] });
-  }
+  // useEffect(() => {
+  //   writeGrid();
+  //   onValue(ref(db, "aezr3"), (snapshop) => {
+  //     const data = snapshop.val();
+  //     console.log(data);
+  //     setPlayers(data.players);
+  //   });
+  // }, []);
 
   return (
     <div className="flex-col items-center justify-center px-8">

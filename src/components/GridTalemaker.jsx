@@ -4,9 +4,9 @@ import Hexagon from "./Hexagon";
 const NB_ROWS = 10;
 const NB_COLS = 10;
 
-function Grid({ colors }) {
-  // console.log("In the grid component", colors);
-
+function GridTalemaker({ roomCode, colors }) {
+  // console.log("In the grid component", colors.colors);
+  let index = 0;
   return (
     <div className="flex justify-center my-24">
       <div className="flex flex-col items-center">
@@ -22,6 +22,7 @@ function Grid({ colors }) {
                 key={colIndex}
                 index={rowIndex * NB_COLS + colIndex}
                 colorsProps={colors}
+                roomCode={roomCode}
               />
             ))}
           </div>
@@ -31,4 +32,4 @@ function Grid({ colors }) {
   );
 }
 
-export default Grid;
+export default GridTalemaker;
