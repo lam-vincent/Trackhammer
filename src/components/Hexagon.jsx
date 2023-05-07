@@ -6,20 +6,23 @@ function Hexagon({ index, colorsProps, roomCode }) {
   const [colorIndex, setColorIndex] = useState(0);
 
   useEffect(() => {
-    updateHexagon(false);
+    updateHexagon("bg-blue-600", false);
     console.log("update hexa");
   }, []);
 
-  async function updateHexagon(visible) {
+  async function updateHexagon(color, visible) {
     set(ref(db, `${roomCode}/hexagons/${index}`), {
-      color: colorsProps[colorIndex],
+      color,
       visible,
     });
   }
 
   function handleChange() {
     setColorIndex((prev) => (prev + 1 === colorsProps.length ? 0 : prev + 1));
-    updateHexagon(colorIndex === 0);
+    updateHexagon(
+      colorsProps[colorIndex + 1 === colorsProps.length ? 0 : 1],
+      colorIndex === 0
+    );
   }
 
   const style = {
