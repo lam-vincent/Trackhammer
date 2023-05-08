@@ -113,9 +113,9 @@ const Home = () => {
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
         <h1 className="text-5xl font-bold text-white">Eternal War</h1>
-        <div name="message" className="text-white">
+        {/* <div name="message" className="text-white">
           make sure to be sign in
-        </div>
+        </div> */}
         <div name="clock" className="text-white">
           <Timer />
         </div>
@@ -132,9 +132,9 @@ const Home = () => {
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
         <h1 className="text-5xl font-bold text-white">Maëlstrom</h1>
-        <div name="message" className="text-white">
+        {/* <div name="message" className="text-white">
           make sure to be sign in
-        </div>
+        </div> */}
         <FormMaelstrom />
       </div>
 

@@ -23,19 +23,17 @@ const Maelstrom = () => {
     console.log(data);
   });
 
+  // 3hrJN
+  set;
+
   return (
-    <div className="flex-col items-center justify-center px-8 text-white">
-      <div
-        className="flex flex-col justify-center bg-cover bg-center p-8 rounded-3xl space-y-8"
-        style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
-      >
-        <div className="wrapper">
-          <div className="code"></div>
-          <div className="connected-users"></div>
-        </div>
-        <div className="board">
-          <Grid roomCode={code} colors={colors} />
-        </div>
+    <div>
+      <div name="wrapper">
+        <div name="code">{code}</div>
+        <div name="connected-users"></div>
+      </div>
+      <div name="board">
+        <Grid roomCode={code} colors={colors} />
       </div>
     </div>
   );

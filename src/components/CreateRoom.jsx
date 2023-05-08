@@ -69,9 +69,9 @@ function CreateRoom() {
       style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
     >
       <h1 className="text-5xl font-bold text-white">The TaleMaker</h1>
-      <div name="message" className="text-white">
+      {/* <div name="message" className="text-white">
         select the hexagons that you want to keep by clicking on them
-      </div>
+      </div> */}
       <CreateGrid
         colors={colors}
         hexagons={hexagons}
