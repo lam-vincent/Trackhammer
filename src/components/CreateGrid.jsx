@@ -6,7 +6,7 @@ const NB_COLS = 10;
 
 function Grid({ colors, hexagons, setHexagons }) {
   return (
-    <div className="flex justify-center my-24 border-2 rounded-xl pt-3">
+    <div className="flex justify-center my-2 border-2 rounded-xl pt-3">
       <div className="flex flex-col items-center">
         {Array.from({ length: NB_ROWS }).map((_, rowIndex) => (
           <div

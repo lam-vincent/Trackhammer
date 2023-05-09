@@ -42,9 +42,7 @@ function CreateRoom() {
   // 30-->39
   const [hexagons, setHexagons] = useState(new Array(95).fill(0)); //maybe not the right size (95 ???)
 
-  console.log(hexagons.length);
-
-  async function HandleClick() {
+  async function createRoom() {
     let i = 0;
     for (const hexagon of hexagons) {
       set(ref(db, `${code}/hexagons/${i}`), {
@@ -65,13 +63,10 @@ function CreateRoom() {
   return (
     <div
       name="the-talemaker"
-      className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
+      className="w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
       style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
     >
-      <h1 className="text-5xl font-bold text-white">The TaleMaker</h1>
-      {/* <div name="message" className="text-white">
-        select the hexagons that you want to keep by clicking on them
-      </div> */}
+      <h1 className="text-5xl font-bold text-white my-2">The TaleMaker</h1>
       <CreateGrid
         colors={colors}
         hexagons={hexagons}
@@ -80,8 +75,8 @@ function CreateRoom() {
 
       <NavLink to={"/maelstrom/" + code}>
         <button
-          onClick={HandleClick}
-          className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded"
+          onClick={createRoom}
+          className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded my-2"
         >
           Create Room
         </button>

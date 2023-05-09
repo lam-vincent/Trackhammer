@@ -2,7 +2,8 @@ import { Link } from "react-scroll";
 import Carousel from "/src/components/Carousel.jsx";
 import { NavLink } from "react-router-dom";
 import Timer from "/src/components/Timer";
-import FormMaelstrom from "/src/components/FormMaelstrom";
+import EnterRoom from "/src/components/EnterRoom";
+import EnterEternal from "/src/components/EnterEternal";
 import CreateRoom from "/src/components/CreateRoom";
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
@@ -16,28 +17,9 @@ const slides = [
 ];
 
 const Home = () => {
-  const [players, setPlayers] = useState([]);
-
-  // useEffect(() => {
-  //   writeGrid();
-  //   onValue(ref(db, "aezr3"), (snapshop) => {
-  //     const data = snapshop.val();
-  //     console.log(data);
-  //     setPlayers(data.players);
-  //   });
-  // }, []);
-
   return (
     <div className="flex-col items-center justify-center px-8">
-      {/* look here */}
-      {/* <button onClick={updateDb}>updatedb</button> */}
-
       <div className="">
-        <h1>
-          {players.map((name) => (
-            <h2>{name}</h2>
-          ))}
-        </h1>
         <div
           className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl"
           style={{
@@ -113,17 +95,10 @@ const Home = () => {
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
         <h1 className="text-5xl font-bold text-white">Eternal War</h1>
-        {/* <div name="message" className="text-white">
-          make sure to be sign in
-        </div> */}
         <div name="clock" className="text-white">
           <Timer />
         </div>
-        <NavLink to="/eternal">
-          <button className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
-            Enter the Eternal War
-          </button>
-        </NavLink>
+        <EnterEternal />
       </div>
 
       <div
@@ -132,10 +107,7 @@ const Home = () => {
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
         <h1 className="text-5xl font-bold text-white">Maëlstrom</h1>
-        {/* <div name="message" className="text-white">
-          make sure to be sign in
-        </div> */}
-        <FormMaelstrom />
+        <EnterRoom />
       </div>
 
       <CreateRoom />
