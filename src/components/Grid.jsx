@@ -22,8 +22,8 @@ function Grid({ roomCode, colors }) {
   if (!data) return;
 
   return (
-    <div className="flex justify-center my-24 border-2 rounded-xl pt-3">
-      <div className="flex flex-col items-center">
+    <div className="flex justify-center my-24 rounded-xl pt-3">
+      <div className="flex flex-col items-center border-2 p-8 rounded-lg">
         {Array.from({ length: NB_ROWS }).map((_, rowIndex) => (
           <div
             key={rowIndex}

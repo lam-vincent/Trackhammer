@@ -5,6 +5,10 @@ import { db } from "../firebase";
 function Hexagon({ index, colorsProps, roomCode, colorIndex }) {
   const [localColorIndex, setColorIndex] = useState(colorIndex);
 
+  useEffect(() => {
+    setColorIndex(colorIndex);
+  }, [colorIndex]);
+
   async function updateHexagon(i) {
     await set(ref(db, `${roomCode}/hexagons/${index}`), {
       colorIndex: i,
@@ -13,7 +17,9 @@ function Hexagon({ index, colorsProps, roomCode, colorIndex }) {
 
   async function handleChange() {
     setColorIndex((prev) => (prev + 1 === colorsProps.length ? 0 : prev + 1));
-    await updateHexagon(localColorIndex);
+    updateHexagon(
+      localColorIndex + 1 === colorsProps.length ? 0 : localColorIndex + 1
+    );
   }
 
   const style = {

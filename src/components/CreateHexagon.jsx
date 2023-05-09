@@ -7,8 +7,10 @@ function Hexagon({ index, colorsProps, hexagons, setHexagons }) {
 
   async function handleChange() {
     setColorIndex((prev) => (prev + 1 === colorsProps.length ? 0 : prev + 1));
-    hexagons[index] = localColorIndex;
-    setHexagons(hexagons);
+    const hexaCpy = [...hexagons];
+    hexaCpy[index] =
+      localColorIndex + 1 === colorsProps.length ? 0 : localColorIndex + 1;
+    setHexagons(hexaCpy);
   }
 
   const style = {
