@@ -12,7 +12,6 @@ function Grid({ roomCode, colors }) {
   useEffect(() => {
     onValue(ref(db, roomCode), (snapshot) => {
       const data = snapshot.val();
-      console.log(data);
       setData(data);
     });
   }, []);

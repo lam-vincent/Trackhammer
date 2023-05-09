@@ -4,20 +4,20 @@ import { ref, set, onValue } from "firebase/database";
 import { db } from "../firebase";
 
 const EnterRoom = () => {
-  const [roomCode, setRoomCode] = useState("Qdly9");
-  const [name, setName] = useState("");
+  const [roomCode, setRoomCode] = useState("Qdly9"); //not clean enough
+  const [name, setName] = useState("unnamed");
   const [faction, setFaction] = useState("Necron (gray)");
-
   const [players, setPlayers] = useState([]);
 
-  // onValue(ref(db, roomCode), (snapshop) => {
-  //   const data = snapshop.val();
-  //   setPlayers(data.connected_users);
-  // });
+  useEffect(() => {
+    onValue(ref(db, roomCode), (snapshot) => {
+      const data = snapshot.val();
+      setPlayers(data?.connected_users || []);
+    });
+  }, [roomCode]);
 
   async function enterRoom() {
-    // let index = Object.keys(players).length;
-    let index = 2;
+    const index = players.length;
     set(ref(db, `${roomCode}/connected_users/${index}`), {
       name: name,
       faction: faction,
