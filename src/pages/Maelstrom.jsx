@@ -29,9 +29,13 @@ const Maelstrom = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex">
-        <div>{code}</div>
-        <ul>
+      <div className="flex items-center justify-between mx-32">
+        <div>
+          <div className="flex justify-center items-center border-2 rounded-lg p-4 ">
+            {code}
+          </div>
+        </div>
+        <ul className="flex flex-col justify-center items-center border-2 rounded-lg p-4">
           {players.map((player, index) => (
             <li key={index} className="inline-block px-2 py-1 m-1 rounded-md">
               {player.name} - {player.faction}

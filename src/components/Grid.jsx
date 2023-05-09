@@ -10,7 +10,6 @@ function Grid({ roomCode, colors }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    // pf5Ri
     onValue(ref(db, roomCode), (snapshot) => {
       const data = snapshot.val();
       console.log(data);
@@ -22,7 +21,7 @@ function Grid({ roomCode, colors }) {
   if (!data) return;
 
   return (
-    <div className="flex justify-center my-24 rounded-xl pt-3">
+    <div className="flex justify-center my-4 rounded-xl pt-3">
       <div className="flex flex-col items-center border-2 p-8 rounded-lg">
         {Array.from({ length: NB_ROWS }).map((_, rowIndex) => (
           <div

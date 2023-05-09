@@ -4,7 +4,7 @@ import { ref, set, onValue } from "firebase/database";
 import { db } from "../firebase";
 
 const EnterRoom = () => {
-  const [roomCode, setRoomCode] = useState("");
+  const [roomCode, setRoomCode] = useState("Qdly9");
   const [name, setName] = useState("");
   const [faction, setFaction] = useState("Necron (gray)");
 
@@ -16,14 +16,13 @@ const EnterRoom = () => {
   // });
 
   async function enterRoom() {
-    let index = Object.keys(players).length;
+    // let index = Object.keys(players).length;
+    let index = 2;
     set(ref(db, `${roomCode}/connected_users/${index}`), {
       name: name,
       faction: faction,
     });
   }
-
-  console.log();
 
   return (
     <div className="mt-8 max-w-md">
