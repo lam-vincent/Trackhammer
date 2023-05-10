@@ -90,7 +90,7 @@ const Home = () => {
       </div>
 
       <div
-        name="eternal-war"
+        id="eternal"
         className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl space-y-4"
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
@@ -102,7 +102,7 @@ const Home = () => {
       </div>
 
       <div
-        name="maelstrom"
+        id="maelstrom"
         className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >

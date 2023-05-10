@@ -3,6 +3,8 @@ import Grid from "/src/components/Grid";
 import { ref, onValue, set } from "firebase/database";
 import { db } from "../firebase";
 import { useParams } from "react-router-dom";
+import CreateHistory from "/src/components/CreateHistory";
+import DisplayHistoric from "/src/components/DisplayHistoric";
 
 const colors = [
   "",
@@ -45,6 +47,16 @@ const Maelstrom = () => {
       </div>
       <div>
         <Grid roomCode={code} colors={colors} />
+      </div>
+
+      <div className="h-auto w-auto flex flex-col items-center justify-center mt-8 rounded-3xl bg-black m-16 p-16">
+        <h1 className="text-5xl font-bold text-white">Create Historic</h1>
+        <CreateHistory />
+      </div>
+
+      <div className="h-auto w-auto flex flex-col items-center justify-center mt-8 rounded-3xl border-2 m-16 p-16">
+        <h1 className="text-5xl font-bold">Display Historic</h1>
+        <DisplayHistoric roomCode={code} />
       </div>
     </div>
   );
