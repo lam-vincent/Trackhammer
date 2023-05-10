@@ -1,13 +1,9 @@
 import { Link } from "react-scroll";
 import Carousel from "/src/components/Carousel.jsx";
-import { NavLink } from "react-router-dom";
 import Timer from "/src/components/Timer";
 import EnterRoom from "/src/components/EnterRoom";
 import EnterEternal from "/src/components/EnterEternal";
 import CreateRoom from "/src/components/CreateRoom";
-import { useEffect, useState } from "react";
-import { db } from "../firebase";
-import { onValue, ref, set } from "firebase/database";
 
 const slides = [
   "src/assets/home.png",
@@ -94,7 +90,9 @@ const Home = () => {
         className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl space-y-4"
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
-        <h1 className="text-5xl font-bold text-white">Eternal War</h1>
+        <h1 className="text-5xl font-bold text-white">
+          Enter a Public - Eternal War
+        </h1>
         <div name="clock" className="text-white">
           <Timer />
         </div>
@@ -106,11 +104,15 @@ const Home = () => {
         className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
-        <h1 className="text-5xl font-bold text-white">Maëlstrom</h1>
+        <h1 className="text-5xl font-bold text-white">
+          Enter a Private Room - Maëlstrom
+        </h1>
         <EnterRoom />
       </div>
 
-      <CreateRoom />
+      <div id="talemaker">
+        <CreateRoom />
+      </div>
     </div>
   );
 };

@@ -64,9 +64,8 @@ const EnterRoom = () => {
         <NavLink
           to={`/maelstrom/${roomCode}`}
           className="flex items-center justify-center bg-green-600 hover:bg-blue-500 text-white font-semibold rounded"
-          onClick={enterRoom}
         >
-          <button className="py-2 px-4" type="submit">
+          <button onClick={enterRoom} className="py-2 px-4" type="submit">
             Enter the room
           </button>
         </NavLink>

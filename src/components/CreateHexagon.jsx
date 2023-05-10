@@ -1,41 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { ref, get, set } from "firebase/database";
-import { db } from "../firebase";
+import React from "react";
 
-function CreateHexagon({
-  index,
-  colorsProps,
-  hexagons,
-  setHexagons,
-  isLocked,
-  setIsLocked,
-}) {
-  const [localColorIndex, setColorIndex] = useState(0);
-
-  async function addDataToUseState() {
-    setColorIndex((prev) => (prev + 1 === colorsProps.length ? 0 : prev + 1));
-    const hexaCpy = [...hexagons];
-    hexaCpy[index] =
-      localColorIndex + 1 === colorsProps.length ? 0 : localColorIndex + 1;
-    setHexagons(hexaCpy);
-    console.log("hexaCpy", hexaCpy);
-
-    const isLockedCpy = [...isLocked];
-    const hexagon = hexagons[index];
-    isLockedCpy[index] = hexaCpy === 0 ? 1 : 0; //don't go back to 1 :skull:
-    console.log(hexagon === 0);
-    setIsLocked(isLockedCpy);
-    console.log("isLockedCpy", isLockedCpy);
-  }
-
+function CreateHexagon({ index, colorsProps, hexagons, setHexagons }) {
   const style = {
     clipPath: "polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%)",
   };
 
+  const hexagonCurrentColor = () => {
+    const colorIndex = hexagons[index].colorIndex;
+    console.log(colorsProps);
+    return colorsProps[colorIndex];
+  };
+
+  function updateHexagons() {
+    setHexagons((prev) => {
+      const prevCpy = [...prev];
+      prevCpy[index].colorIndex + 1 === prevCpy.length
+        ? 0
+        : prevCpy[index].colorIndex + 1;
+
+      const isLocked = prevCpy[index].colorIndex === 0;
+
+      prevCpy[index].isLocked = isLocked;
+
+      return prevCpy;
+    });
+  }
+
   return (
     <div
-      onClick={addDataToUseState}
-      className={`w-16 h-16 ${colorsProps[localColorIndex]}`}
+      onClick={updateHexagons}
+      className={`w-16 h-16 ${hexagonCurrentColor}`}
       style={style}
     ></div>
   );

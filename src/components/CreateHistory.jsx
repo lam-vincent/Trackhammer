@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { ref, set, onValue } from "firebase/database";
 import { db } from "../firebase";
 
 const CreateHistory = () => {
-  const [roomCode, setRoomCode] = useState("Qdly9");
+  const { code } = useParams();
   const [rowIndex1, setRowIndex1] = useState("1");
   const [rowIndex2, setRowIndex2] = useState("1");
   const [colIndex1, setColIndex1] = useState("1");
@@ -17,16 +18,16 @@ const CreateHistory = () => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    onValue(ref(db, roomCode), (snapshot) => {
+    onValue(ref(db, code), (snapshot) => {
       const data = snapshot.val();
       setResults(data?.historic || []);
     });
-  }, [roomCode]);
+  }, [code]);
 
   async function addResults() {
     const timestamp = new Date().toLocaleString();
     const index = results.length;
-    set(ref(db, `${roomCode}/historic/${index}`), {
+    set(ref(db, `${code}/historic/${index}`), {
       timestamp: timestamp,
       rowIndex1: rowIndex1,
       rowIndex2: rowIndex2,
@@ -186,16 +187,6 @@ const CreateHistory = () => {
             className="mt-1 block w-full"
             value={score2}
             onChange={(event) => setScore2(event.target.value)}
-          />
-        </label>
-
-        <label className="block col-span-2">
-          <span className="text-white">code</span>
-          <input
-            type="text"
-            className="mt-1 block w-full"
-            value={roomCode}
-            onChange={(event) => setRoomCode(event.target.value)}
           />
         </label>
 

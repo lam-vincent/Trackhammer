@@ -40,24 +40,15 @@ function CreateRoom() {
   // 10-->19
   // 20-->28
   // 30-->39
-  const [hexagons, setHexagons] = useState(new Array(95).fill(0));
-  const [isLocked, setIsLocked] = useState(new Array(95).fill(1));
+  const [hexagons, setHexagons] = useState(
+    new Array(95).fill({
+      colorIndex: 0,
+      isLocked: true,
+    })
+  );
 
   async function createRoom() {
-    let i = 0;
-    for (const hexagon of hexagons) {
-      const locked = isLocked[i]; //the error is here
-      console.log("isLocked", isLocked);
-      set(ref(db, `${code}/hexagons/${i}`), {
-        colorIndex: hexagon,
-        // isLocked: locked, //and here
-      });
-      if (i % 20 === 8) {
-        i += 2;
-      } else {
-        i++;
-      }
-    }
+    set(ref(db, `${code}/hexagons`), hexagons);
   }
 
   // return code while the component is mounting
@@ -75,18 +66,16 @@ function CreateRoom() {
         colors={colors}
         hexagons={hexagons}
         setHexagons={setHexagons}
-        isLocked={isLocked}
-        setIsLocked={setIsLocked}
       />
 
-      <NavLink to={"/maelstrom/" + code}>
+      <a href="#maelstrom">
         <button
           onClick={createRoom}
           className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded my-2"
         >
           Create Room
         </button>
-      </NavLink>
+      </a>
     </div>
   );
 }
