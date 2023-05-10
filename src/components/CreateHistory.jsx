@@ -24,9 +24,10 @@ const CreateHistory = () => {
   }, [roomCode]);
 
   async function addResults() {
+    const timestamp = new Date().toLocaleString();
     const index = results.length;
-    console.log(index);
     set(ref(db, `${roomCode}/historic/${index}`), {
+      timestamp: timestamp,
       rowIndex1: rowIndex1,
       rowIndex2: rowIndex2,
       colIndex1: colIndex1,
@@ -38,7 +39,6 @@ const CreateHistory = () => {
       score1: score1,
       score2: score2,
     });
-    console.log("results", results);
   }
 
   return (

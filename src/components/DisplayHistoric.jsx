@@ -17,6 +17,7 @@ function DisplayHistory({ roomCode }) {
       <table className="border-separate border-spacing-4">
         <thead>
           <tr>
+            <th>Timestamp</th>
             <th>Hexagon 1 (row - col)</th>
             <th>Hexagon 2 (row - col)</th>
             <th>Player 1</th>
@@ -28,6 +29,7 @@ function DisplayHistory({ roomCode }) {
         <tbody>
           {results.map((result, index) => (
             <tr key={index}>
+              <td>{result.timestamp}</td>
               <td>
                 {result.rowIndex1} - {result.colIndex1}
               </td>
