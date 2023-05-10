@@ -25,6 +25,7 @@ const Maelstrom = () => {
   useEffect(() => {
     onValue(ref(db, code), (snapshop) => {
       const data = snapshop.val();
+      console.log(data);
       setPlayers(data.connected_users);
     });
   }, []);
@@ -34,6 +35,7 @@ const Maelstrom = () => {
       <div className="flex items-center justify-between mx-32">
         <div>
           <div className="flex justify-center items-center border-2 rounded-lg p-4 ">
+            <span className="font-bold mr-1">Room Code:</span>
             {code}
           </div>
         </div>

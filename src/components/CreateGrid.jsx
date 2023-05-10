@@ -4,7 +4,7 @@ import CreateHexagon from "./CreateHexagon";
 const NB_ROWS = 10;
 const NB_COLS = 10;
 
-function Grid({ colors, hexagons, setHexagons }) {
+function Grid({ colors, hexagons, setHexagons, isLocked, setIsLocked }) {
   return (
     <div className="flex justify-center my-2 border-2 rounded-xl pt-3">
       <div className="flex flex-col items-center">
@@ -22,6 +22,8 @@ function Grid({ colors, hexagons, setHexagons }) {
                 colorsProps={colors}
                 hexagons={hexagons}
                 setHexagons={setHexagons}
+                isLocked={isLocked}
+                setIsLocked={setIsLocked}
               />
             ))}
           </div>

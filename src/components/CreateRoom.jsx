@@ -40,13 +40,17 @@ function CreateRoom() {
   // 10-->19
   // 20-->28
   // 30-->39
-  const [hexagons, setHexagons] = useState(new Array(95).fill(0)); //maybe not the right size (95 ???)
+  const [hexagons, setHexagons] = useState(new Array(95).fill(0));
+  const [isLocked, setIsLocked] = useState(new Array(95).fill(1));
 
   async function createRoom() {
     let i = 0;
     for (const hexagon of hexagons) {
+      const locked = isLocked[i]; //the error is here
+      console.log("isLocked", isLocked);
       set(ref(db, `${code}/hexagons/${i}`), {
         colorIndex: hexagon,
+        // isLocked: locked, //and here
       });
       if (i % 20 === 8) {
         i += 2;
@@ -71,6 +75,8 @@ function CreateRoom() {
         colors={colors}
         hexagons={hexagons}
         setHexagons={setHexagons}
+        isLocked={isLocked}
+        setIsLocked={setIsLocked}
       />
 
       <NavLink to={"/maelstrom/" + code}>
