@@ -16,11 +16,13 @@ const EnterRoom = ({ code, setCode }) => {
   }, [code]);
 
   async function enterRoom() {
-    const index = players.length;
-    set(ref(db, `${code}/connected_users/${index}`), {
-      name: name,
-      faction: faction,
-    });
+    set(ref(db, `${code}/connected_users/`), [
+      ...players,
+      {
+        name,
+        faction,
+      },
+    ]);
   }
 
   return (
