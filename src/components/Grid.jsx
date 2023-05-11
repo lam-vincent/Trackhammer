@@ -33,7 +33,7 @@ function Grid({ roomCode, colors }) {
             }).map((_, colIndex) => (
               <Hexagon
                 key={colIndex}
-                index={rowIndex * NB_COLS + colIndex}
+                index={rowIndex * NB_COLS + colIndex - Math.ceil(rowIndex / 2)}
                 colorsProps={colors}
                 roomCode={roomCode}
                 colorIndex={
