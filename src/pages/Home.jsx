@@ -77,7 +77,7 @@ const Home = () => {
           name="container"
           className="flex items-center justify-center my-8 space-x-8"
         >
-          <ol name="description" class="list-decimal text-white max-w-lg">
+          <ol name="description" className="list-decimal text-white max-w-lg">
             <li className="pt-4">
               Once connected, give to each player a color depicting their army.
             </li>
