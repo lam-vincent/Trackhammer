@@ -18,6 +18,7 @@ function CreateHexagon({ index, colorsProps, hexagons, setHexagons }) {
     hexaCpy[index].colorIndex = newColorIndex;
     hexaCpy[index].isLocked = newColorIndex === 0;
 
+    console.log(index, hexaCpy);
     setHexagons(hexaCpy);
   }
 

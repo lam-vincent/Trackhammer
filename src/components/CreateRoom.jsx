@@ -20,12 +20,18 @@ function CreateRoom({ code }) {
   // 10-->19
   // 20-->28
   // 30-->39
-  const [hexagons, setHexagons] = useState(
-    new Array(95).fill({
-      colorIndex: 0,
-      isLocked: true,
-    })
-  );
+  const [hexagons, setHexagons] = useState([]);
+
+  useEffect(() => {
+    const hexaCpy = [];
+    for (let i = 0; i < 100; i++) {
+      hexaCpy.push({
+        colorIndex: 0,
+        isLocked: true,
+      });
+    }
+    setHexagons(hexaCpy);
+  }, []);
 
   async function createRoom() {
     set(ref(db, `${code}/hexagons`), hexagons);

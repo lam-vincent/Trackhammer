@@ -18,7 +18,7 @@ function Grid({ colors, hexagons, setHexagons }) {
             }).map((_, colIndex) => (
               <CreateHexagon
                 key={colIndex}
-                index={rowIndex * NB_COLS + colIndex}
+                index={rowIndex * NB_COLS + colIndex - Math.ceil(rowIndex / 2)}
                 colorsProps={colors}
                 hexagons={hexagons}
                 setHexagons={setHexagons}
