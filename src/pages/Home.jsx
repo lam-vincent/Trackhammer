@@ -6,13 +6,6 @@ import EnterRoom from "/src/components/EnterRoom";
 import EnterEternal from "/src/components/EnterEternal";
 import CreateRoom from "/src/components/CreateRoom";
 
-const slides = [
-  "src/assets/home.png",
-  "src/assets/eternal.png",
-  "src/assets/maelstrom.png",
-  "src/assets/talemaker.png",
-];
-
 const Home = () => {
   const [code, setCode] = useState("Qdly9");
 
@@ -63,44 +56,64 @@ const Home = () => {
         </div>
       </div>
 
-      <Carousel></Carousel>
+      <Carousel />
 
       <div
         name="how-does-it-work"
-        className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
+        className="h-auto w-full flex flex-col items-center justify-center mt-8 rounded-3xl py-8"
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
         <h1 name="title" className="text-5xl font-bold text-white">
-          How does it work ?
+          How to use our website ?
         </h1>
         <div
           name="container"
-          className="flex items-center justify-center my-8 space-x-8"
+          className="flex items-center justify-center mt-8 space-x-8"
         >
-          <ol name="description" className="list-decimal text-white max-w-lg">
-            <li className="pt-4">
-              Once connected, give to each player a color depicting their army.
-            </li>
-            <li className="pt-4">
-              Play a game of warhammer 40k on an hexagon in common with another
-              color, the app will generate a random scenario for your game.
-            </li>
-            <li className="pt-4">
-              Once the game played, choose the color of the hexagon of the
-              player who won by clicking on it. If you're playing in Eternal War
-              mode, this step will require a special code.
-            </li>
+          <ol
+            name="description"
+            className="list-decimal text-white max-w-lg border-2 p-8 rounded-lg space-y-8 py-8"
+          >
+            <li>Create a Room with Talemaker</li>
+            <ul className="list-disc ml-4">
+              <li>Visit the Talemaker section on the website</li>
+              <li>Design the layout of the map and click "Create"</li>
+              <li>Share the room code with other players to join the room</li>
+            </ul>
+            <li>Join a Room with Maëlstrom</li>
+            <ul className="list-disc ml-4">
+              <li>Visit the Maëlstrom section on the website</li>
+              <li>
+                Enter the room code provided by the room creator and click
+                "Join"
+              </li>
+              <li>Wait for other players to join the room</li>
+            </ul>
+            <li>Play and Record the Battle</li>
+            <ul className="list-disc ml-4">
+              <li>
+                Click the "Generate Settings" button to generate the random
+                battle settings
+              </li>
+              <li>
+                Play the battle in real life according to the generated settings
+              </li>
+              <li>
+                Record the result of the battle by filling out the form in the
+                "Create Historic" section
+              </li>
+              <li>
+                Update the faction ownership of each hexagon on the grid by
+                clicking on them. The ownership will alternate between the
+                factions.
+              </li>
+            </ul>
           </ol>
           <img
-            className="object-contain h-auto w-2/4"
-            src={slides[0]}
-            alt="home-image"
+            className="object-contain h-auto w-7/12 rounded-xl"
+            src="/inGame.gif"
+            alt="A cool animated GIF"
           />
-        </div>
-        <div name="tagline" className="flex items-center justify-center">
-          <span className="text-white">
-            Congrats, you're now ready to scour the battlefield !
-          </span>
         </div>
       </div>
 
@@ -110,7 +123,7 @@ const Home = () => {
         style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
       >
         <h1 className="text-5xl font-bold text-white">
-          Enter a Public - Eternal War
+          Enter a Public Room - Eternal War
         </h1>
         <div name="clock" className="text-white">
           <Timer />

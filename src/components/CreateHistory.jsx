@@ -195,7 +195,7 @@ const CreateHistory = () => {
           className="col-span-2 flex items-center justify-center bg-green-600 hover:bg-blue-500 text-white font-semibold rounded py-2 px-4"
           type="submit"
         >
-          Add Game Results
+          Create Historic
         </button>
       </div>
     </div>

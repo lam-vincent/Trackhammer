@@ -41,7 +41,9 @@ function CreateRoom({ code }) {
       className="w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
       style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
     >
-      <h1 className="text-5xl font-bold text-white my-2">The TaleMaker</h1>
+      <h1 className="text-5xl font-bold text-white my-2">
+        Create a Room - TaleMaker
+      </h1>
       <CreateGrid
         colors={colors}
         hexagons={hexagons}
@@ -53,7 +55,7 @@ function CreateRoom({ code }) {
           onClick={createRoom}
           className="bg-green-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded my-2"
         >
-          Create Room
+          Create
         </button>
       </a>
     </div>

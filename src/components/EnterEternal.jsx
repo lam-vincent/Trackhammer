@@ -57,7 +57,7 @@ const EnterRoom = () => {
           className="flex items-center justify-center bg-green-600 hover:bg-blue-500 text-white font-semibold rounded"
         >
           <button onClick={enterRoom} className="py-2 px-4" type="submit">
-            Enter the room
+            Join
           </button>
         </NavLink>
       </div>

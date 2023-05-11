@@ -8,12 +8,7 @@ const slides = [
   "src/assets/talemaker.png",
 ];
 
-const anchors = [
-  "how-does-it-work",
-  "eternal-war",
-  "maelstrom",
-  "the-talemaker",
-];
+const anchors = ["how-does-it-work", "eternal", "maelstrom", "talemaker"];
 
 const texts = [
   "Follow these three steps to get ready for the battlefield",
