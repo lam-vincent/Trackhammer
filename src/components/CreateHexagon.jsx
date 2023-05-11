@@ -1,41 +1,30 @@
-import React from "react";
+import { useState } from "react";
 
 function CreateHexagon({ index, colorsProps, hexagons, setHexagons }) {
+  const [localColor, setLocalColor] = useState("");
   const style = {
     clipPath: "polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%)",
   };
 
-  const hexagonCurrentColor = () => {
-    const hexagon = hexagons[index];
-    if (!hexagon) {
-      return "";
-    }
-    const colorIndex = hexagon.colorIndex;
-    console.log(colorsProps);
-    return colorsProps[colorIndex];
-  };
-
   function updateHexagons() {
-    setHexagons((prev) => {
-      const prevCpy = [...prev];
-      prevCpy[index].colorIndex =
-        prevCpy[index].colorIndex + 1 === colorsProps.length
-          ? 0
-          : prevCpy[index].colorIndex + 1;
+    const hexaCpy = [...hexagons];
+    const newColorIndex =
+      hexaCpy[index].colorIndex + 1 === colorsProps.length
+        ? 0
+        : hexaCpy[index].colorIndex + 1;
 
-      const isLocked = prevCpy[index].colorIndex === 0;
-      // const prevCpy[index].isLocked = prevCpy[index].colorIndex === 0;
+    setLocalColor(colorsProps[newColorIndex]);
 
-      prevCpy[index].isLocked = prevCpy[index].colorIndex === 0;
+    hexaCpy[index].colorIndex = newColorIndex;
+    hexaCpy[index].isLocked = newColorIndex === 0;
 
-      return prevCpy;
-    });
+    setHexagons(hexaCpy);
   }
 
   return (
     <div
       onClick={updateHexagons}
-      className={`w-16 h-16 ${hexagonCurrentColor}`}
+      className={`w-16 h-16 ${localColor}`}
       style={style}
     ></div>
   );

@@ -26,7 +26,6 @@ const Maelstrom = () => {
   useEffect(() => {
     onValue(ref(db, code), (snapshop) => {
       const data = snapshop.val();
-      console.log(data);
       setPlayers(data.connected_users);
     });
   }, []);
@@ -37,6 +36,8 @@ const Maelstrom = () => {
     setPlayers(newUsers);
     await set(ref(db, `${code}/connected_users`), newUsers);
   }
+
+  if (!players?.length) return null;
 
   return (
     <div className="flex flex-col">

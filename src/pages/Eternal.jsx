@@ -16,11 +16,9 @@ const colors = [
 
 const Eternal = () => {
   const { code } = "4hcyz";
-  console.log(code);
 
   onValue(ref(db, code), (snapshot) => {
     const data = snapshot.val();
-    console.log(data);
   });
 
   return (

@@ -20,9 +20,9 @@ const Header = () => {
         </div>
 
         <div className="flex items-center justify-center text-sm space-x-4">
-          <Link to="/#eternal">Eternal War</Link>
-          <Link to="/#maelstrom">Maelstrom</Link>
-          <Link to="/#talemaker">The Talemaker</Link>
+          <a href="#eternal">Eternal War</a>
+          <a href="#maelstrom">Maelstrom</a>
+          <a href="#talemaker">The Talemaker</a>
         </div>
 
         <div className="flex items-center justify-end w-1/4 space-x-4">
