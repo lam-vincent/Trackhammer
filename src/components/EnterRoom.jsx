@@ -3,22 +3,21 @@ import { NavLink } from "react-router-dom";
 import { ref, set, onValue } from "firebase/database";
 import { db } from "../firebase";
 
-const EnterRoom = () => {
-  const [roomCode, setRoomCode] = useState("Qdly9"); //not clean enough
+const EnterRoom = ({ code }) => {
   const [name, setName] = useState("unnamed");
   const [faction, setFaction] = useState("Necron (gray)");
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-    onValue(ref(db, roomCode), (snapshot) => {
+    onValue(ref(db, code), (snapshot) => {
       const data = snapshot.val();
       setPlayers(data?.connected_users || []);
     });
-  }, [roomCode]);
+  }, [code]);
 
   async function enterRoom() {
     const index = players.length;
-    set(ref(db, `${roomCode}/connected_users/${index}`), {
+    set(ref(db, `${code}/connected_users/${index}`), {
       name: name,
       faction: faction,
     });
@@ -57,12 +56,12 @@ const EnterRoom = () => {
           <input
             type="text"
             className="mt-1 block w-full"
-            value={roomCode}
-            onChange={(event) => setRoomCode(event.target.value)}
+            value={code}
+            onChange={(event) => setcode(event.target.value)}
           />
         </label>
         <NavLink
-          to={`/maelstrom/${roomCode}`}
+          to={`/maelstrom/${code}`}
           className="flex items-center justify-center bg-green-600 hover:bg-blue-500 text-white font-semibold rounded"
         >
           <button onClick={enterRoom} className="py-2 px-4" type="submit">

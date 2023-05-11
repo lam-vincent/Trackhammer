@@ -6,7 +6,11 @@ function CreateHexagon({ index, colorsProps, hexagons, setHexagons }) {
   };
 
   const hexagonCurrentColor = () => {
-    const colorIndex = hexagons[index].colorIndex;
+    const hexagon = hexagons[index];
+    if (!hexagon) {
+      return "";
+    }
+    const colorIndex = hexagon.colorIndex;
     console.log(colorsProps);
     return colorsProps[colorIndex];
   };
@@ -14,13 +18,15 @@ function CreateHexagon({ index, colorsProps, hexagons, setHexagons }) {
   function updateHexagons() {
     setHexagons((prev) => {
       const prevCpy = [...prev];
-      prevCpy[index].colorIndex + 1 === prevCpy.length
-        ? 0
-        : prevCpy[index].colorIndex + 1;
+      prevCpy[index].colorIndex =
+        prevCpy[index].colorIndex + 1 === colorsProps.length
+          ? 0
+          : prevCpy[index].colorIndex + 1;
 
       const isLocked = prevCpy[index].colorIndex === 0;
+      // const prevCpy[index].isLocked = prevCpy[index].colorIndex === 0;
 
-      prevCpy[index].isLocked = isLocked;
+      prevCpy[index].isLocked = prevCpy[index].colorIndex === 0;
 
       return prevCpy;
     });

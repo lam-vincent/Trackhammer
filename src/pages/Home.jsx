@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import Carousel from "/src/components/Carousel.jsx";
 import Timer from "/src/components/Timer";
@@ -13,6 +14,26 @@ const slides = [
 ];
 
 const Home = () => {
+  const [code, setCode] = useState("Qdly9");
+  console.log(code);
+
+  function generateCode() {
+    let code = "";
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const charactersLength = characters.length;
+
+    for (let i = 0; i < 5; i++) {
+      code += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return code;
+  }
+
+  useEffect(() => {
+    setCode(generateCode());
+    console.log(code);
+  }, []);
   return (
     <div className="flex-col items-center justify-center px-8">
       <div className="">
@@ -107,11 +128,11 @@ const Home = () => {
         <h1 className="text-5xl font-bold text-white">
           Enter a Private Room - Maëlstrom
         </h1>
-        <EnterRoom />
+        <EnterRoom code={code} />
       </div>
 
       <div id="talemaker">
-        <CreateRoom />
+        <CreateRoom code={code} />
       </div>
     </div>
   );

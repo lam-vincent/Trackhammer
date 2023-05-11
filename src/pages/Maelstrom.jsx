@@ -21,6 +21,7 @@ const Maelstrom = () => {
   const { code } = useParams();
 
   const [players, setPlayers] = useState([]);
+  // const [showDeleteButton, setShowDeleteButton] = useState(false); //new line
 
   useEffect(() => {
     onValue(ref(db, code), (snapshop) => {
@@ -30,9 +31,21 @@ const Maelstrom = () => {
     });
   }, []);
 
+  // index to delete the right one
+  // put code in new component ?
+
+  //new lines
+  // const handleDeleteUsers = () => {
+  //   set(ref(db, `${code}/connected_users`), []);
+  // };
+
   return (
     <div className="flex flex-col">
-      <div className="flex items-center justify-between mx-32">
+      <div
+        className="flex items-center justify-between mx-32"
+        // onMouseEnter={() => setShowDeleteButton(true)} //new line
+        // onMouseLeave={() => setShowDeleteButton(false)} //new line
+      >
         <div>
           <div className="flex justify-center items-center border-2 rounded-lg p-4 ">
             <span className="font-bold mr-1">Room Code:</span>
@@ -46,6 +59,9 @@ const Maelstrom = () => {
             </li>
           ))}
         </ul>
+        {/* {showDeleteButton && ( //new lines
+          <button onClick={handleDeleteUsers}>Delete Users</button>
+        )} */}
       </div>
       <div>
         <Grid roomCode={code} colors={colors} />
