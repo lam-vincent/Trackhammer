@@ -27,8 +27,6 @@ const Home = () => {
   }, []);
   return (
     <div className="flex-col items-center justify-center px-8">
-      <a href="#maelstrom">Link to My Section</a>
-
       <div className="">
         <div
           className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl"
@@ -133,6 +131,10 @@ const Home = () => {
         <EnterEternal />
       </div>
 
+      <div id="talemaker">
+        <CreateRoom code={code} />
+      </div>
+
       <div
         id="maelstrom"
         className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
@@ -142,10 +144,6 @@ const Home = () => {
           Enter a Private Room - Maëlstrom
         </h1>
         <EnterRoom code={code} setCode={setCode} />
-      </div>
-
-      <div id="talemaker">
-        <CreateRoom code={code} />
       </div>
     </div>
   );
