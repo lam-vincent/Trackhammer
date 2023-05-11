@@ -5,6 +5,7 @@ import { db } from "../firebase";
 import { useParams } from "react-router-dom";
 import CreateHistory from "/src/components/CreateHistory";
 import DisplayHistoric from "/src/components/DisplayHistoric";
+import { data } from "autoprefixer";
 
 const colors = [
   "",
@@ -21,10 +22,8 @@ const Maelstrom = () => {
   const { code } = useParams();
 
   const [players, setPlayers] = useState([]);
-  // const [showDeleteButton, setShowDeleteButton] = useState(false); //new line
 
   useEffect(() => {
-    console.log("hello");
     onValue(ref(db, code), (snapshop) => {
       const data = snapshop.val();
       console.log(data);
@@ -32,21 +31,16 @@ const Maelstrom = () => {
     });
   }, []);
 
-  // index to delete the right one
-  // put code in new component ?
-
-  //new lines
-  // const handleDeleteUsers = () => {
-  //   set(ref(db, `${code}/connected_users`), []);
-  // };
+  async function deleteConnectedUser(index) {
+    const newUsers = [...players];
+    newUsers.splice(index, 1);
+    setPlayers(newUsers);
+    await set(ref(db, `${code}/connected_users`), newUsers);
+  }
 
   return (
     <div className="flex flex-col">
-      <div
-        className="flex items-center justify-between mx-32"
-        // onMouseEnter={() => setShowDeleteButton(true)} //new line
-        // onMouseLeave={() => setShowDeleteButton(false)} //new line
-      >
+      <div className="flex items-center justify-between mx-32">
         <div>
           <div className="flex justify-center items-center border-2 rounded-lg p-4 ">
             <span className="font-bold mr-1">Room Code:</span>
@@ -55,14 +49,16 @@ const Maelstrom = () => {
         </div>
         <ul className="flex flex-col justify-center items-center border-2 rounded-lg p-4">
           {players.map((player, index) => (
-            <li key={index} className="inline-block px-2 py-1 m-1 rounded-md">
-              {player.name} - {player.faction}
-            </li>
+            <div>
+              <li key={index} className="inline-block px-2 py-1 m-1 rounded-md">
+                {player.name} - {player.faction}
+              </li>
+              {players.length > 1 && (
+                <button onClick={() => deleteConnectedUser(index)}>✖</button>
+              )}
+            </div>
           ))}
         </ul>
-        {/* {showDeleteButton && ( //new lines
-          <button onClick={handleDeleteUsers}>Delete Users</button>
-        )} */}
       </div>
       <div>
         <Grid roomCode={code} colors={colors} />
