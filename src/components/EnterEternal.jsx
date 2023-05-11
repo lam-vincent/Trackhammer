@@ -4,7 +4,7 @@ import { ref, set, onValue } from "firebase/database";
 import { db } from "../firebase";
 
 const EnterRoom = () => {
-  const [roomCode, setRoomCode] = useState("Qdly9"); //not clean enough
+  const [roomCode, setRoomCode] = useState("0kNy2"); //not clean enough
   const [name, setName] = useState("unnamed");
   const [faction, setFaction] = useState("Necron (gray)");
   const [players, setPlayers] = useState([]);

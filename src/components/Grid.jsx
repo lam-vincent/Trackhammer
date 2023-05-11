@@ -37,7 +37,9 @@ function Grid({ roomCode, colors }) {
                 colorsProps={colors}
                 roomCode={roomCode}
                 colorIndex={
-                  data.hexagons[rowIndex * NB_COLS + colIndex]?.colorIndex
+                  data.hexagons[
+                    rowIndex * NB_COLS + colIndex - Math.ceil(rowIndex / 2)
+                  ]?.colorIndex
                 }
               />
             ))}

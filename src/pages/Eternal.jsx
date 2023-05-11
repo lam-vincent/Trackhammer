@@ -1,7 +1,6 @@
 import Grid from "/src/components/Grid";
 import { ref, onValue } from "firebase/database";
 import { db } from "../firebase";
-import { useParams } from "react-router-dom";
 
 const colors = [
   "",
@@ -15,7 +14,7 @@ const colors = [
 ];
 
 const Eternal = () => {
-  const { code } = "4hcyz";
+  const { code } = "0kNy2";
 
   onValue(ref(db, code), (snapshot) => {
     const data = snapshot.val();
