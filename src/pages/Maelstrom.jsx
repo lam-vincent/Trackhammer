@@ -24,6 +24,7 @@ const Maelstrom = () => {
   // const [showDeleteButton, setShowDeleteButton] = useState(false); //new line
 
   useEffect(() => {
+    console.log("hello");
     onValue(ref(db, code), (snapshop) => {
       const data = snapshop.val();
       console.log(data);

@@ -15,7 +15,6 @@ const slides = [
 
 const Home = () => {
   const [code, setCode] = useState("Qdly9");
-  console.log(code);
 
   function generateCode() {
     let code = "";
@@ -32,7 +31,6 @@ const Home = () => {
 
   useEffect(() => {
     setCode(generateCode());
-    console.log(code);
   }, []);
   return (
     <div className="flex-col items-center justify-center px-8">
@@ -128,7 +126,7 @@ const Home = () => {
         <h1 className="text-5xl font-bold text-white">
           Enter a Private Room - Maëlstrom
         </h1>
-        <EnterRoom code={code} />
+        <EnterRoom code={code} setCode={setCode} />
       </div>
 
       <div id="talemaker">

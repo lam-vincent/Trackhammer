@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { ref, set, onValue } from "firebase/database";
 import { db } from "../firebase";
 
-const EnterRoom = ({ code }) => {
+const EnterRoom = ({ code, setCode }) => {
   const [name, setName] = useState("unnamed");
   const [faction, setFaction] = useState("Necron (gray)");
   const [players, setPlayers] = useState([]);
@@ -57,7 +57,7 @@ const EnterRoom = ({ code }) => {
             type="text"
             className="mt-1 block w-full"
             value={code}
-            onChange={(event) => setcode(event.target.value)}
+            onChange={(event) => setCode(event.target.value)}
           />
         </label>
         <NavLink
