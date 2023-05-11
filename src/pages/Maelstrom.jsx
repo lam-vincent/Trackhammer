@@ -5,7 +5,7 @@ import { db } from "../firebase";
 import { useParams } from "react-router-dom";
 import CreateHistory from "/src/components/CreateHistory";
 import DisplayHistoric from "/src/components/DisplayHistoric";
-import { data } from "autoprefixer";
+import SettingGenerator from "/src/components/SettingGenerator";
 
 const colors = [
   "",
@@ -72,6 +72,9 @@ const Maelstrom = () => {
       <div className="h-auto w-auto flex flex-col items-center justify-center mt-8 rounded-3xl border-2 m-16 p-16">
         <h1 className="text-5xl font-bold">Display Historic</h1>
         <DisplayHistoric roomCode={code} />
+      </div>
+      <div className="h-auto w-auto flex flex-col items-center justify-center mt-8 rounded-3xl border-2 m-16 p-16">
+        <SettingGenerator />
       </div>
     </div>
   );
