@@ -50,8 +50,8 @@ const Maelstrom = () => {
         </div>
         <ul className="flex flex-col justify-center items-center border-2 rounded-lg p-4">
           {players.map((player, index) => (
-            <div>
-              <li key={index} className="inline-block px-2 py-1 m-1 rounded-md">
+            <div key={index}>
+              <li className="inline-block px-2 py-1 m-1 rounded-md">
                 {player.name} - {player.faction}
               </li>
               {players.length > 1 && (
