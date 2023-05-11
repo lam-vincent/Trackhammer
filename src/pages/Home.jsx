@@ -27,6 +27,8 @@ const Home = () => {
   }, []);
   return (
     <div className="flex-col items-center justify-center px-8">
+      <a href="#maelstrom">Link to My Section</a>
+
       <div className="">
         <div
           className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl"

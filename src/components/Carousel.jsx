@@ -11,7 +11,7 @@ const slides = [
 const anchors = ["how-does-it-work", "eternal", "maelstrom", "talemaker"];
 
 const texts = [
-  "Follow these three steps to get ready for the battlefield",
+  "Follow these steps to get ready for the battlefield",
   "In the Grim Darkness of the far future, there is only war. Join the whole world in an indomitable crusade. Everyone is playing on the same map. Will you contribute to the war effort and makes your faction triumph ?",
   "Maim ! Burn ! Let there be carnage !  Join your friends in an ongoing campaign up to twelve player. Carves your own legends in the darkness of the 41st millenium and let your army be remembered for the eons to come.",
   "The power of the machine god invest thee. Live ! Design your map using our tool and create your very own narrative to make the best experience available for up to twelve player, the only limit is your imagination. Be aware that this feature can only be used by  contributor account.",

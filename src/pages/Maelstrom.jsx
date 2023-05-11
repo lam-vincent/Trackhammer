@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-scroll";
 import Grid from "/src/components/Grid";
 import { ref, onValue, set } from "firebase/database";
 import { db } from "../firebase";
@@ -41,9 +40,6 @@ const Maelstrom = () => {
 
   return (
     <div className="flex flex-col">
-      <Link to="setting-generator" spy={true} smooth={true} duration={8000}>
-        <button className="bg-transparent py-2 px-4 border border-blue-500"></button>
-      </Link>
       <div className="flex items-center justify-between mx-32">
         <div>
           <div className="flex justify-center items-center border-2 rounded-lg p-4 ">

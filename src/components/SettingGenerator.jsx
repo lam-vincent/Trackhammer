@@ -5,6 +5,12 @@ const BuildingLayout = ({ layout }) => {
     <div className="flex border-2 p-4 m-2 rounded-xl">
       <div className="font-bold mr-2">Building Layout:</div>
       {layout}
+      <a
+        href="https://drive.google.com/file/d/1t1UlUe3lmNtRs4xg3ZLk1WWLnhQ8TvSn/view"
+        target="_blank"
+      >
+        📕
+      </a>
     </div>
   );
 };
@@ -13,6 +19,12 @@ const DeploymentZone = ({ zone }) => {
   return (
     <div className="flex border-2 p-4 m-2 rounded-xl">
       <div className="font-bold mr-2">Deployment Zone:</div> {zone}
+      <a
+        href="https://wahapedia.ru/wh40k9ed/the-rules/tempest-of-war/"
+        target="_blank"
+      >
+        📕
+      </a>
     </div>
   );
 };
