@@ -12,6 +12,7 @@ function Grid({ roomCode, colors }) {
   useEffect(() => {
     onValue(ref(db, roomCode), (snapshot) => {
       const data = snapshot.val();
+      console.log(data);
       setData(data);
     });
   }, []);
@@ -36,9 +37,7 @@ function Grid({ roomCode, colors }) {
                 colorsProps={colors}
                 roomCode={roomCode}
                 colorIndex={
-                  Boolean(roomCode)
-                    ? data.hexagons[rowIndex * NB_COLS + colIndex].colorIndex
-                    : 0
+                  data.hexagons[rowIndex * NB_COLS + colIndex]?.colorIndex
                 }
               />
             ))}
