@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -20,9 +20,9 @@ const Header = () => {
         </div>
 
         <div className="flex items-center justify-center text-sm space-x-4">
-          <a href="#eternal">Eternal War</a>
-          <a href="#maelstrom">Maelstrom</a>
-          <a href="#talemaker">The Talemaker</a>
+          <HashLink to="/#eternal">Eternal War</HashLink>
+          <HashLink to="/#maelstrom">Maelstrom</HashLink>
+          <HashLink to="/#talemaker">The Talemaker</HashLink>
         </div>
 
         <div className="flex items-center justify-end w-1/4 space-x-4">
