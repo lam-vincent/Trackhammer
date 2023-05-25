@@ -45,7 +45,7 @@ function CreateRoom({ code }) {
     <div
       name="the-talemaker"
       className="w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
-      style={{ backgroundImage: `url(src/assets/home-page-background.png)` }}
+      style={{ backgroundImage: `url(public/home-page-background.png)` }}
     >
       <h1 className="text-5xl font-bold text-white my-2">
         Create a Room - TaleMaker
