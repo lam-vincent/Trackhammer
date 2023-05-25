@@ -6,7 +6,7 @@ const Home = () => {
       <div className="">
         <div
           className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl"
-          style={{ backgroundImage: `url(public/home-page-background.png)` }}
+          style={{ backgroundImage: `url(/public/home-page-background.png)` }}
         >
           <div className="flex flex-col items-center backdrop-blur-md rounded-3xl p-4 mb-32">
             <h1 className="text-5xl font-bold text-white mb-10">

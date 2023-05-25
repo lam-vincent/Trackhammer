@@ -26,7 +26,7 @@ const Eternal = () => {
 
       <div
         className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl space-y-8"
-        style={{ backgroundImage: `url(public/home-page-background.png)` }}
+        style={{ backgroundImage: `url(/public/home-page-background.png)` }}
       >
         <div
           name="title"
