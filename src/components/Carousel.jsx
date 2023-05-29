@@ -4,7 +4,12 @@ import EternalImage from "../assets/eternal.png";
 import MaelstromImage from "../assets/maelstrom.png";
 import TalemakerImage from "../assets/talemaker.png";
 
-const slides = ["/home.png", EternalImage, MaelstromImage, TalemakerImage];
+const slides = [
+  "/Trackhammer/home.png",
+  EternalImage,
+  MaelstromImage,
+  TalemakerImage,
+];
 
 const anchors = ["how-does-it-work", "eternal", "maelstrom", "talemaker"];
 
