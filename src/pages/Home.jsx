@@ -31,7 +31,7 @@ const Home = () => {
         <div
           className="flex flex-col justify-center h-screen bg-cover bg-center p-8 rounded-3xl"
           style={{
-            backgroundImage: `url(/home-page-background.png)`,
+            backgroundImage: `url(../assets/home-page-background.png)`,
           }}
         >
           <div className="flex flex-col items-center backdrop-blur-md rounded-3xl p-4 mb-32">
@@ -111,7 +111,7 @@ const Home = () => {
           </ol>
           <img
             className="object-contain h-auto w-7/12 rounded-xl"
-            src="/inGame.gif"
+            src="../assets/inGame.gif"
             alt="A cool animated GIF"
           />
         </div>
