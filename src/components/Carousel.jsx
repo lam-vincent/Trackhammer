@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import EternalImage from "../assets/eternal.png";
-import MaelstromImage from "../assets/maelstrom.png";
-import TalemakerImage from "../assets/talemaker.png";
 
 const slides = [
   "/Trackhammer/home.png",
-  EternalImage,
-  MaelstromImage,
-  TalemakerImage,
+  "/Trackhammer/eternal.png",
+  "/Trackhammer/maelstrom.png",
+  "/Trackhammer/talemaker.png",
 ];
 
 const anchors = ["how-does-it-work", "eternal", "maelstrom", "talemaker"];
