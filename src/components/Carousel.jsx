@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 
 const slides = [
-  "/home.png",
-  "/eternal.png",
-  "/maelstrom.png",
-  "/talemaker.png",
+  "../assets/home.png",
+  "../assets/eternal.png",
+  "../assets/maelstrom.png",
+  "../assets/talemaker.png",
 ];
 
 const anchors = ["how-does-it-work", "eternal", "maelstrom", "talemaker"];

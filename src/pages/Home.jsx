@@ -61,7 +61,7 @@ const Home = () => {
       <div
         name="how-does-it-work"
         className="h-auto w-full flex flex-col items-center justify-center mt-8 rounded-3xl py-8"
-        style={{ backgroundImage: `url(/home-page-background.png)` }}
+        style={{ backgroundImage: `url(../assets/home-page-background.png)` }}
       >
         <h1 name="title" className="text-5xl font-bold text-white">
           How to use our website ?
@@ -120,7 +120,7 @@ const Home = () => {
       <div
         id="eternal"
         className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl space-y-4"
-        style={{ backgroundImage: `url(/home-page-background.png)` }}
+        style={{ backgroundImage: `url(../assets/home-page-background.png)` }}
       >
         <h1 className="text-5xl font-bold text-white">
           Enter a Public Room - Eternal War
@@ -138,7 +138,7 @@ const Home = () => {
       <div
         id="maelstrom"
         className="h-screen w-full flex flex-col items-center justify-center mt-8 rounded-3xl"
-        style={{ backgroundImage: `url(/home-page-background.png)` }}
+        style={{ backgroundImage: `url(../assets/home-page-background.png)` }}
       >
         <h1 className="text-5xl font-bold text-white">
           Enter a Private Room - Maëlstrom
