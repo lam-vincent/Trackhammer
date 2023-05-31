@@ -23,6 +23,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Trackhammer/" element={<Home />} />
 
           <Route path="/eternal" element={<Eternal />} />
           <Route path="/maelstrom/:code" element={<Maelstrom />} />
